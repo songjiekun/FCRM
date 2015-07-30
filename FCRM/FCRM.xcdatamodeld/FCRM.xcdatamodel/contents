@@ -1,4 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AdvisorHistoryData" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="income" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="monthYear" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="newuser" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedAt" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="FeaturedProduct" representedClassName="" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="level" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="managerName" attributeType="String" syncable="YES"/>
+        <attribute name="managerProfileImageUrl" attributeType="String" syncable="YES"/>
+        <attribute name="minAmount" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="oID" attributeType="String" syncable="YES"/>
+        <attribute name="period" attributeType="Date" syncable="YES"/>
+        <attribute name="productName" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" attributeType="Date" syncable="YES"/>
+        <attribute name="yieldRate" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Investor" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="investorProfileImageUrl" attributeType="String" syncable="YES"/>
+        <attribute name="mobilePhoneNumber" attributeType="String" syncable="YES"/>
+        <attribute name="realName" attributeType="String" syncable="YES"/>
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" attributeType="Date" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Order" syncable="YES"/>
+    <entity name="SavedProduct" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="level" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="managerName" attributeType="String" syncable="YES"/>
+        <attribute name="managerProfileImageUrl" attributeType="String" syncable="YES"/>
+        <attribute name="minAmount" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="period" attributeType="Date" syncable="YES"/>
+        <attribute name="productName" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" attributeType="Date" syncable="YES"/>
+        <attribute name="yieldRate" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="productHistoryData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SavedProductHistoryData" inverseName="product" inverseEntity="SavedProductHistoryData" syncable="YES"/>
+    </entity>
+    <entity name="SavedProductHistoryData" syncable="YES">
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedProduct" inverseName="productHistoryData" inverseEntity="SavedProduct" syncable="YES"/>
+    </entity>
+    <entity name="Task" syncable="YES"/>
+    <entity name="TaskProduct" syncable="YES"/>
+    <elements>
+        <element name="AdvisorHistoryData" positionX="-351" positionY="0" width="128" height="135"/>
+        <element name="FeaturedProduct" positionX="-110" positionY="131" width="128" height="195"/>
+        <element name="Investor" positionX="-684" positionY="-315" width="128" height="163"/>
+        <element name="Order" positionX="-146" positionY="-342" width="128" height="45"/>
+        <element name="SavedProduct" positionX="-776" positionY="129" width="128" height="210"/>
+        <element name="SavedProductHistoryData" positionX="-774" positionY="-63" width="128" height="58"/>
+        <element name="Task" positionX="43" positionY="-351" width="128" height="45"/>
+        <element name="TaskProduct" positionX="-360" positionY="-9" width="128" height="45"/>
+    </elements>
 </model>

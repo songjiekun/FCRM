@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //navigation bar后退字体颜色
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    //[[UINavigationBar appearance]
+    
+    //使用leancloud的身份证明
+    [AVOSCloud setApplicationId:@"0walde2ms7k35nu8z16arqgj6cv7n8b77nivju0e283693tr"
+                      clientKey:@"rakn1yd8jh59qhpridc98mqfn1jowl0sb71iv3ldj4n9bm1a"];
+    
     return YES;
 }
 

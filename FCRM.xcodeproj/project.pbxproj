@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		408863ED4F4353D05BD43B69 /* libPods-FCRM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B96895F5C7F0D544F4A62E1 /* libPods-FCRM.a */; };
 		801A48071B5F9EEE006D537B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A48061B5F9EEE006D537B /* main.m */; };
 		801A480A1B5F9EEE006D537B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A48091B5F9EEE006D537B /* AppDelegate.m */; };
 		801A480D1B5F9EEE006D537B /* FCRM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 801A480B1B5F9EEE006D537B /* FCRM.xcdatamodeld */; };
@@ -15,6 +16,29 @@
 		801A48151B5F9EEE006D537B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A48141B5F9EEE006D537B /* Images.xcassets */; };
 		801A48181B5F9EEE006D537B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801A48161B5F9EEE006D537B /* LaunchScreen.xib */; };
 		801A48241B5F9EEF006D537B /* FCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A48231B5F9EEF006D537B /* FCRMTests.m */; };
+		8028D5BE1B69D4BC0054D0EF /* baoxianicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5B81B69D4BC0054D0EF /* baoxianicon.png */; };
+		8028D5BF1B69D4BC0054D0EF /* duichongicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5B91B69D4BC0054D0EF /* duichongicon.png */; };
+		8028D5C01B69D4BC0054D0EF /* gupiaoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5BA1B69D4BC0054D0EF /* gupiaoicon.png */; };
+		8028D5C11B69D4BC0054D0EF /* huobiicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5BB1B69D4BC0054D0EF /* huobiicon.png */; };
+		8028D5C21B69D4BC0054D0EF /* p2picon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5BC1B69D4BC0054D0EF /* p2picon.png */; };
+		8028D5C31B69D4BC0054D0EF /* zhaiquanicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5BD1B69D4BC0054D0EF /* zhaiquanicon.png */; };
+		8028D5C81B69D98C0054D0EF /* high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5C41B69D98C0054D0EF /* high@2x.png */; };
+		8028D5C91B69D98C0054D0EF /* high@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5C51B69D98C0054D0EF /* high@3x.png */; };
+		8028D5CA1B69D98C0054D0EF /* middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5C61B69D98C0054D0EF /* middle@2x.png */; };
+		8028D5CB1B69D98C0054D0EF /* middle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5C71B69D98C0054D0EF /* middle@3x.png */; };
+		8028D5CE1B69D9A10054D0EF /* low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5CC1B69D9A10054D0EF /* low@2x.png */; };
+		8028D5CF1B69D9A10054D0EF /* low@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5CD1B69D9A10054D0EF /* low@3x.png */; };
+		8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5D11B6A139E0054D0EF /* ProductListViewController.m */; };
+		8028D5DD1B6A1FC20054D0EF /* SimpleFilterPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5DC1B6A1FC20054D0EF /* SimpleFilterPicker.xib */; };
+		8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5DF1B6A200C0054D0EF /* SimpleFilterPicker.m */; };
+		808E65101B68A8BE00314238 /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808E650F1B68A8BE00314238 /* ProductList.storyboard */; };
+		808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65121B68BA2D00314238 /* ProductCategoriesViewController.m */; };
+		808E65171B68BADD00314238 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65151B68BADD00314238 /* ProductTableViewCell.m */; };
+		808E65181B68BADD00314238 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808E65161B68BADD00314238 /* ProductTableViewCell.xib */; };
+		808E651C1B68BCC700314238 /* high.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E65191B68BCC700314238 /* high.png */; };
+		808E651D1B68BCC700314238 /* low.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E651A1B68BCC700314238 /* low.png */; };
+		808E651E1B68BCC700314238 /* middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E651B1B68BCC700314238 /* middle.png */; };
+		808E65211B68CF9B00314238 /* ProductT.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65201B68CF9B00314238 /* ProductT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FE2DA54412FB4F4226B9B78 /* Pods-FCRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FCRM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FCRM/Pods-FCRM.debug.xcconfig"; sourceTree = "<group>"; };
+		6B96895F5C7F0D544F4A62E1 /* libPods-FCRM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FCRM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F80FD54B0F213004D014CFE /* Pods-FCRM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FCRM.release.xcconfig"; path = "Pods/Target Support Files/Pods-FCRM/Pods-FCRM.release.xcconfig"; sourceTree = "<group>"; };
 		801A48011B5F9EEE006D537B /* FCRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801A48051B5F9EEE006D537B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801A48061B5F9EEE006D537B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +69,34 @@
 		801A481D1B5F9EEF006D537B /* FCRMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCRMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801A48221B5F9EEF006D537B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801A48231B5F9EEF006D537B /* FCRMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCRMTests.m; sourceTree = "<group>"; };
+		8028D5B81B69D4BC0054D0EF /* baoxianicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baoxianicon.png; sourceTree = "<group>"; };
+		8028D5B91B69D4BC0054D0EF /* duichongicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duichongicon.png; sourceTree = "<group>"; };
+		8028D5BA1B69D4BC0054D0EF /* gupiaoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gupiaoicon.png; sourceTree = "<group>"; };
+		8028D5BB1B69D4BC0054D0EF /* huobiicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huobiicon.png; sourceTree = "<group>"; };
+		8028D5BC1B69D4BC0054D0EF /* p2picon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p2picon.png; sourceTree = "<group>"; };
+		8028D5BD1B69D4BC0054D0EF /* zhaiquanicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhaiquanicon.png; sourceTree = "<group>"; };
+		8028D5C41B69D98C0054D0EF /* high@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "high@2x.png"; sourceTree = "<group>"; };
+		8028D5C51B69D98C0054D0EF /* high@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "high@3x.png"; sourceTree = "<group>"; };
+		8028D5C61B69D98C0054D0EF /* middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middle@2x.png"; sourceTree = "<group>"; };
+		8028D5C71B69D98C0054D0EF /* middle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middle@3x.png"; sourceTree = "<group>"; };
+		8028D5CC1B69D9A10054D0EF /* low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "low@2x.png"; sourceTree = "<group>"; };
+		8028D5CD1B69D9A10054D0EF /* low@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "low@3x.png"; sourceTree = "<group>"; };
+		8028D5D01B6A139E0054D0EF /* ProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListViewController.h; sourceTree = "<group>"; };
+		8028D5D11B6A139E0054D0EF /* ProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListViewController.m; sourceTree = "<group>"; };
+		8028D5DC1B6A1FC20054D0EF /* SimpleFilterPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFilterPicker.xib; sourceTree = "<group>"; };
+		8028D5DE1B6A200C0054D0EF /* SimpleFilterPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFilterPicker.h; sourceTree = "<group>"; };
+		8028D5DF1B6A200C0054D0EF /* SimpleFilterPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFilterPicker.m; sourceTree = "<group>"; };
+		808E650F1B68A8BE00314238 /* ProductList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
+		808E65111B68BA2D00314238 /* ProductCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoriesViewController.h; sourceTree = "<group>"; };
+		808E65121B68BA2D00314238 /* ProductCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoriesViewController.m; sourceTree = "<group>"; };
+		808E65141B68BADD00314238 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		808E65151B68BADD00314238 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
+		808E65161B68BADD00314238 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		808E65191B68BCC700314238 /* high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = high.png; sourceTree = "<group>"; };
+		808E651A1B68BCC700314238 /* low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = low.png; sourceTree = "<group>"; };
+		808E651B1B68BCC700314238 /* middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middle.png; sourceTree = "<group>"; };
+		808E651F1B68CF9B00314238 /* ProductT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductT.h; sourceTree = "<group>"; };
+		808E65201B68CF9B00314238 /* ProductT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductT.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408863ED4F4353D05BD43B69 /* libPods-FCRM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +118,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38A1874B4B2640C4C86DC8D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B96895F5C7F0D544F4A62E1 /* libPods-FCRM.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F3C11A8E099D0C94654A75C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FE2DA54412FB4F4226B9B78 /* Pods-FCRM.debug.xcconfig */,
+				7F80FD54B0F213004D014CFE /* Pods-FCRM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		801A47F81B5F9EEE006D537B = {
 			isa = PBXGroup;
 			children = (
 				801A48031B5F9EEE006D537B /* FCRM */,
 				801A48201B5F9EEF006D537B /* FCRMTests */,
 				801A48021B5F9EEE006D537B /* Products */,
+				4F3C11A8E099D0C94654A75C /* Pods */,
+				38A1874B4B2640C4C86DC8D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +158,11 @@
 		801A48031B5F9EEE006D537B /* FCRM */ = {
 			isa = PBXGroup;
 			children = (
+				8028D5D31B6A1E270054D0EF /* Reusable Component */,
+				808E652B1B6901D300314238 /* Segue */,
+				808E65221B68CFBB00314238 /* Model */,
+				808E650E1B68A82F00314238 /* Product List Section */,
+				808E65031B68A7B100314238 /* Image Resource */,
 				801A48081B5F9EEE006D537B /* AppDelegate.h */,
 				801A48091B5F9EEE006D537B /* AppDelegate.m */,
 				801A480E1B5F9EEE006D537B /* ViewController.h */,
@@ -122,6 +202,109 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8028D5D31B6A1E270054D0EF /* Reusable Component */ = {
+			isa = PBXGroup;
+			children = (
+				8028D5D61B6A1EFD0054D0EF /* FilterButton */,
+				8028D5D51B6A1EB00054D0EF /* SimpleFilterPicker */,
+				8028D5D41B6A1E7E0054D0EF /* ProductCell */,
+			);
+			name = "Reusable Component";
+			sourceTree = "<group>";
+		};
+		8028D5D41B6A1E7E0054D0EF /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				808E65151B68BADD00314238 /* ProductTableViewCell.m */,
+				808E65161B68BADD00314238 /* ProductTableViewCell.xib */,
+				808E65141B68BADD00314238 /* ProductTableViewCell.h */,
+			);
+			name = ProductCell;
+			sourceTree = "<group>";
+		};
+		8028D5D51B6A1EB00054D0EF /* SimpleFilterPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8028D5DE1B6A200C0054D0EF /* SimpleFilterPicker.h */,
+				8028D5DF1B6A200C0054D0EF /* SimpleFilterPicker.m */,
+				8028D5DC1B6A1FC20054D0EF /* SimpleFilterPicker.xib */,
+			);
+			name = SimpleFilterPicker;
+			sourceTree = "<group>";
+		};
+		8028D5D61B6A1EFD0054D0EF /* FilterButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FilterButton;
+			sourceTree = "<group>";
+		};
+		808E65031B68A7B100314238 /* Image Resource */ = {
+			isa = PBXGroup;
+			children = (
+				808E651A1B68BCC700314238 /* low.png */,
+				8028D5CC1B69D9A10054D0EF /* low@2x.png */,
+				8028D5CD1B69D9A10054D0EF /* low@3x.png */,
+				808E65191B68BCC700314238 /* high.png */,
+				8028D5C41B69D98C0054D0EF /* high@2x.png */,
+				8028D5C51B69D98C0054D0EF /* high@3x.png */,
+				808E651B1B68BCC700314238 /* middle.png */,
+				8028D5C61B69D98C0054D0EF /* middle@2x.png */,
+				8028D5C71B69D98C0054D0EF /* middle@3x.png */,
+				8028D5B81B69D4BC0054D0EF /* baoxianicon.png */,
+				8028D5B91B69D4BC0054D0EF /* duichongicon.png */,
+				8028D5BA1B69D4BC0054D0EF /* gupiaoicon.png */,
+				8028D5BB1B69D4BC0054D0EF /* huobiicon.png */,
+				8028D5BC1B69D4BC0054D0EF /* p2picon.png */,
+				8028D5BD1B69D4BC0054D0EF /* zhaiquanicon.png */,
+			);
+			name = "Image Resource";
+			sourceTree = "<group>";
+		};
+		808E650E1B68A82F00314238 /* Product List Section */ = {
+			isa = PBXGroup;
+			children = (
+				808E65111B68BA2D00314238 /* ProductCategoriesViewController.h */,
+				808E65121B68BA2D00314238 /* ProductCategoriesViewController.m */,
+				8028D5D01B6A139E0054D0EF /* ProductListViewController.h */,
+				8028D5D11B6A139E0054D0EF /* ProductListViewController.m */,
+				808E650F1B68A8BE00314238 /* ProductList.storyboard */,
+			);
+			name = "Product List Section";
+			sourceTree = "<group>";
+		};
+		808E65221B68CFBB00314238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				808E65271B68DB0D00314238 /* CoreData */,
+				808E65231B68CFE100314238 /* Transient */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		808E65231B68CFE100314238 /* Transient */ = {
+			isa = PBXGroup;
+			children = (
+				808E651F1B68CF9B00314238 /* ProductT.h */,
+				808E65201B68CF9B00314238 /* ProductT.m */,
+			);
+			name = Transient;
+			sourceTree = "<group>";
+		};
+		808E65271B68DB0D00314238 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		808E652B1B6901D300314238 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +312,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 801A48271B5F9EEF006D537B /* Build configuration list for PBXNativeTarget "FCRM" */;
 			buildPhases = (
+				F95B00D137B4C45F67D250F5 /* Check Pods Manifest.lock */,
 				801A47FD1B5F9EEE006D537B /* Sources */,
 				801A47FE1B5F9EEE006D537B /* Frameworks */,
 				801A47FF1B5F9EEE006D537B /* Resources */,
+				7FE0D750C11D7CFFC586DA7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +356,7 @@
 				TargetAttributes = {
 					801A48001B5F9EEE006D537B = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3V55936433;
 					};
 					801A481C1B5F9EEF006D537B = {
 						CreatedOnToolsVersion = 6.4;
@@ -202,9 +388,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8028D5CA1B69D98C0054D0EF /* middle@2x.png in Resources */,
+				8028D5C81B69D98C0054D0EF /* high@2x.png in Resources */,
+				808E651D1B68BCC700314238 /* low.png in Resources */,
+				8028D5BF1B69D4BC0054D0EF /* duichongicon.png in Resources */,
+				808E65101B68A8BE00314238 /* ProductList.storyboard in Resources */,
 				801A48131B5F9EEE006D537B /* Main.storyboard in Resources */,
+				8028D5CF1B69D9A10054D0EF /* low@3x.png in Resources */,
+				8028D5C11B69D4BC0054D0EF /* huobiicon.png in Resources */,
 				801A48181B5F9EEE006D537B /* LaunchScreen.xib in Resources */,
+				8028D5CB1B69D98C0054D0EF /* middle@3x.png in Resources */,
 				801A48151B5F9EEE006D537B /* Images.xcassets in Resources */,
+				8028D5C31B69D4BC0054D0EF /* zhaiquanicon.png in Resources */,
+				8028D5C91B69D98C0054D0EF /* high@3x.png in Resources */,
+				8028D5C21B69D4BC0054D0EF /* p2picon.png in Resources */,
+				808E65181B68BADD00314238 /* ProductTableViewCell.xib in Resources */,
+				808E651C1B68BCC700314238 /* high.png in Resources */,
+				808E651E1B68BCC700314238 /* middle.png in Resources */,
+				8028D5BE1B69D4BC0054D0EF /* baoxianicon.png in Resources */,
+				8028D5CE1B69D9A10054D0EF /* low@2x.png in Resources */,
+				8028D5C01B69D4BC0054D0EF /* gupiaoicon.png in Resources */,
+				8028D5DD1B6A1FC20054D0EF /* SimpleFilterPicker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +421,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7FE0D750C11D7CFFC586DA7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FCRM/Pods-FCRM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F95B00D137B4C45F67D250F5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		801A47FD1B5F9EEE006D537B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -225,7 +462,12 @@
 				801A480A1B5F9EEE006D537B /* AppDelegate.m in Sources */,
 				801A48071B5F9EEE006D537B /* main.m in Sources */,
 				801A48101B5F9EEE006D537B /* ViewController.m in Sources */,
+				8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */,
+				808E65171B68BADD00314238 /* ProductTableViewCell.m in Sources */,
 				801A480D1B5F9EEE006D537B /* FCRM.xcdatamodeld in Sources */,
+				808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */,
+				8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */,
+				808E65211B68CF9B00314238 /* ProductT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +591,13 @@
 		};
 		801A48281B5F9EEF006D537B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FE2DA54412FB4F4226B9B78 /* Pods-FCRM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FCRM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,9 +605,13 @@
 		};
 		801A48291B5F9EEF006D537B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F80FD54B0F213004D014CFE /* Pods-FCRM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FCRM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -420,6 +670,7 @@
 				801A48291B5F9EEF006D537B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		801A482A1B5F9EEF006D537B /* Build configuration list for PBXNativeTarget "FCRMTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +679,7 @@
 				801A482C1B5F9EEF006D537B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

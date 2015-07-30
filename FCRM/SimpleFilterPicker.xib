@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleFilterPicker">
+            <connections>
+                <outlet property="filterTableView" destination="LNd-p4-o6C" id="ruK-Vi-CQv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="281"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-p4-o6C">
+                    <rect key="frame" x="0.0" y="0.0" width="504" height="279"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="xS5-3x-gcF"/>
+                        <outlet property="delegate" destination="-1" id="7Db-64-Eb3"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dH-uS-kKd">
+                    <rect key="frame" x="0.0" y="279" width="504" height="2"/>
+                    <color key="backgroundColor" red="0.98311644099999995" green="0.3165903383" blue="0.3545444251" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" constant="2" id="LqC-vS-ahH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LNd-p4-o6C" secondAttribute="trailing" id="8C3-oz-Kda"/>
+                <constraint firstItem="LNd-p4-o6C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Cl7-7L-YWz"/>
+                <constraint firstItem="2dH-uS-kKd" firstAttribute="top" secondItem="LNd-p4-o6C" secondAttribute="bottom" id="Fie-vl-hCj"/>
+                <constraint firstItem="2dH-uS-kKd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VmL-J5-ON0"/>
+                <constraint firstItem="LNd-p4-o6C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YLl-NS-37C"/>
+                <constraint firstAttribute="bottom" secondItem="2dH-uS-kKd" secondAttribute="bottom" id="aZz-6R-b06"/>
+                <constraint firstAttribute="trailing" secondItem="2dH-uS-kKd" secondAttribute="trailing" id="yvW-cZ-xhI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="499" y="151.5"/>
+        </view>
+    </objects>
+</document>
