@@ -8,6 +8,7 @@
 
 #import "ProductListViewController.h"
 #import "ProductTableViewCell.h"
+#import "ProductDetailViewController.h"
 
 @interface ProductListViewController ()
 
@@ -64,10 +65,15 @@
     self.levelFilterView.filterArray=[[NSMutableArray alloc] initWithArray:@[@"高风险",@"折中型",@"稳定型"]] ;
     self.levelFilterView.delegate=self;
     
+    self.sortFilterView.filterArray=[[NSMutableArray alloc] initWithArray:@[@"收益率由高到低",@"认购额由低到高",@"用户评分由高到低"]] ;
+    self.sortFilterView.delegate=self;
+    
     //设置filter constraint初始高度
     self.levelFilterView.viewHeight.constant=0;
+    self.sortFilterView.viewHeight.constant=0;
     //保存filter高度
-    self.levelFilterView.height=90;
+    self.levelFilterView.height=120;
+    self.sortFilterView.height=120;
     
 }
 
@@ -80,6 +86,7 @@
 #pragma mark - SimpleFilterPicker Delegate 根据风险高低来筛选
 -(void)selectRowAtIndexPath:(NSIndexPath *)indexPath sender:(id)sender{
     
+    //根据风险度来筛选
     if (self.levelFilterView==(SimpleFilterPicker*)sender) {
         
         if (indexPath.row==0) {
@@ -95,6 +102,25 @@
         else if (indexPath.row==2) {
             
             [ProductT reloadProducts:self action:@selector(reloadProductList:) category:self.category level:[NSNumber numberWithInt:3] sort:nil];
+            
+        }
+        
+        //根据条件来排序
+    } else if (self.sortFilterView==(SimpleFilterPicker*)sender){
+        
+        if (indexPath.row==0) {
+            
+            [ProductT reloadProducts:self action:@selector(reloadProductList:) category:self.category level:nil sort:@"productYieldRate"];
+            
+        }
+        else if (indexPath.row==1) {
+            
+            [ProductT reloadProducts:self action:@selector(reloadProductList:) category:self.category level:nil sort:@"productMinAmount"];
+            
+        }
+        else if (indexPath.row==2) {
+            
+            [ProductT reloadProducts:self action:@selector(reloadProductList:) category:self.category level:nil sort:@"userScore"];
             
         }
         
@@ -137,9 +163,10 @@
     return cell;
 }
 
+//通过xib来定义的cell 必须通过didSelectRowAtIndexPath来触发segue
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    //[self performSegueWithIdentifier:@"ShowProductDetail" sender:tableView];
+    [self performSegueWithIdentifier:@"ProductDetailSegue" sender:tableView];
     
 }
 
@@ -191,28 +218,43 @@
  }
  */
 
-/*
- #pragma mark - Navigation
+
+ #pragma mark - prepareForSegue传递数据
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+     
+     ProductDetailViewController *destinationVC=segue.destinationViewController;
+     
+     if ([[segue identifier] isEqualToString:@"ProductDetailSegue"]) {
+         
+         NSIndexPath *indexPath= [self.tableView indexPathForSelectedRow];
+         
+         //传递数据
+         destinationVC.product=self.products[indexPath.row];
+         
+     }
  }
- */
+
+
 #pragma mark - helper 方法
+/*!
+ *@discussion 填充tableviewcell
+ */
 - (void)configureCell:(ProductTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     //获取对应的product
     ProductT *product = [self.products objectAtIndex:indexPath.row];
     
     //更新Cell
-    cell.categoryLabel.text=product.productCategory;
+    cell.categoryLabel.text=[NSString stringWithFormat:@"类型:%@",product.productCategory];
     cell.yieldRateLabel.text=[NSString stringWithFormat:@"%@%%",product.productYieldRate];
     cell.productNameLabel.text=product.productName;
     cell.periodLabel.text=[NSString stringWithFormat:@"认购期限:%@",product.productPeriod];
     cell.minAmount.text=[NSString stringWithFormat:@"起购额:%@万",product.productMinAmount];
-    cell.investorRateLabel.text=[NSString stringWithFormat:@"用户评分:%@分",nil];
+    cell.investorRateLabel.text=[NSString stringWithFormat:@"用户评分:%@分",product.userScore];
     
     //不同level的product不同的背景图
     switch ([product.productLevel integerValue]) {
@@ -235,30 +277,48 @@
     
 }
 
+/*!
+ *@discussion 更新tableview
+ */
 -(void)reloadProductList:(NSMutableArray*)reloadedProducts{
     
+    //重新载入tableview数据
     self.products=reloadedProducts;
     [self.tableView reloadData];
+    
+    //灰色view隐藏掉
+    self.grayView.hidden=YES;
     
 }
 
 #pragma mark - click action 方法
-/*!
- *@discussion 打开或关闭filter
- */
+
 - (IBAction)clickLevelFilter:(id)sender{
     
-    if(self.levelFilterView.viewHeight.constant==0){
-        
-        [self.levelFilterView toggleOnView];
-        
-    }
-    else if(self.levelFilterView.viewHeight.constant==self.levelFilterView.height){
-        
-        [self.levelFilterView toggleOffView];
-        
-    }
+    [self.levelFilterView switchView:self.grayView];
+    
+    [self.sortFilterView hideView];
     
 }
+
+
+- (IBAction)clickSortFilter:(id)sender{
+    
+    [self.sortFilterView switchView:self.grayView];
+    
+    [self.levelFilterView hideView];
+    
+}
+
+- (IBAction)hideAllFilter:(UITapGestureRecognizer*)recognize{
+    
+    [self.sortFilterView toggleOffView];
+    
+    [self.levelFilterView toggleOffView];
+    
+    self.grayView.hidden=YES;
+    
+}
+
 
 @end

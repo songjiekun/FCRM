@@ -120,7 +120,7 @@
     }
     
     cell.textLabel.text=self.filterArray[indexPath.row];
-    cell.textLabel.font=[UIFont systemFontOfSize:12];
+    cell.textLabel.font=[UIFont systemFontOfSize:13];
     
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     
@@ -134,6 +134,14 @@
     [self.delegate selectRowAtIndexPath:indexPath sender:self];
     
     [self toggleOffView];
+    
+}
+
+//单行的高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 40;
     
 }
 
@@ -167,10 +175,30 @@
     
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)switchView:(UIView*)grayView{
     
-    return 30;
+    if(self.viewHeight.constant==0){
+        
+        [self toggleOnView];
+        
+        grayView.hidden=NO;
+        
+    }
+    else if(self.viewHeight.constant==self.height){
+        
+        [self toggleOffView];
+        
+        grayView.hidden=YES;
+        
+    }
+    
+};
+
+- (void)hideView{
+    
+    self.viewHeight.constant=0;
+    
+    [self layoutIfNeeded];
     
 }
 

@@ -7,11 +7,11 @@
 //
 
 #import "ProductT.h"
-#import <AVOSCloud/AVOSCloud.h>
+
 
 @implementation ProductT
 
-+(id)createProductWithProductName:(NSString*)productName category:(NSString*)productCategory productID:(NSString*)oID level:(NSNumber*)productLevel minAmount:(NSNumber*)productMinAmount yieldRate:(NSNumber*)productYieldRate  period:(NSString*)productPeriod createdDate:(NSDate*)createdAt updatedDate:(NSDate*)updatedAt profileUrl:(NSString*)managerProfileImageUrl managerName:(NSString*)managerName{
++(id)createProductWithProductName:(NSString*)productName category:(NSString*)productCategory productID:(NSString*)oID level:(NSNumber*)productLevel minAmount:(NSNumber*)productMinAmount yieldRate:(NSNumber*)productYieldRate userScore:(NSNumber*)userScore  period:(NSString*)productPeriod createdDate:(NSDate*)createdAt updatedDate:(NSDate*)updatedAt profileUrl:(NSString*)managerProfileImageUrl managerName:(NSString*)managerName{
     
     ProductT* newProduct=[[ProductT alloc] init];
     newProduct.productName=productName;
@@ -25,6 +25,34 @@
     newProduct.updatedAt=updatedAt;
     newProduct.managerProfileImageUrl=managerProfileImageUrl;
     newProduct.managerName=managerName;
+    newProduct.userScore=userScore;
+    newProduct.managerProfileInternetImage=[InternetImage createImageWithUrl:managerProfileImageUrl];
+    
+    return newProduct;
+    
+}
+
++(id)createProductWithAVObject:(AVObject*)object{
+    
+    AVObject* manager=[object objectForKey:@"manager"];
+    AVFile *managerProfile=[manager objectForKey:@"profile"];
+    
+    NSString* oID=[object objectForKey:@"objectId"];
+    NSNumber* productLevel=[object objectForKey:@"productLevel"];
+    NSString* managerName=[manager objectForKey:@"managerName"];
+    NSString* managerProfileImageUrl=managerProfile.url;
+    NSNumber* productMinAmount=[object objectForKey:@"productMinAmount"];
+    NSString* productPeriod=[object objectForKey:@"productPeriod"];
+    NSString* productName=[object objectForKey:@"productName"];
+    NSString* productCategory= [object objectForKey:@"productCategory"];
+    NSDate* updatedAt=[object objectForKey:@"updatedAt"];
+    NSDate* createdAt=[object objectForKey:@"createdAt"];
+    NSNumber* productYieldRate=[object objectForKey:@"productYieldRate"];
+    NSNumber* userScore=[object objectForKey:@"userScore"];
+    
+    
+    //生成新的product
+    ProductT *newProduct = [ProductT createProductWithProductName:productName category:productCategory productID:oID level:productLevel minAmount:productMinAmount yieldRate:productYieldRate userScore:userScore period:productPeriod createdDate:createdAt updatedDate:updatedAt profileUrl:managerProfileImageUrl managerName:managerName];
     
     return newProduct;
     
@@ -47,7 +75,7 @@
     
     
     //筛选与排序
-    
+    //筛选
     if (productCategory) {
         
         [query whereKey:@"productCategory" equalTo:productCategory];
@@ -60,11 +88,23 @@
         
     }
     
-#warning 需要添加排序
+    //排序
     if (productSort) {
         
-        [query whereKey:@"productLevel" equalTo:productLevel];
-        
+        if ([productSort isEqualToString:@"productYieldRate"]) {
+            
+            [query orderByDescending:@"productYieldRate"];
+            
+        }else if ([productSort isEqualToString:@"productMinAmount"]) {
+            
+            [query orderByAscending:@"productMinAmount"];
+            
+        }else if ([productSort isEqualToString:@"userScore"]) {
+            
+            [query orderByDescending:@"userScore"];
+            
+        }
+ 
     }
     
     
@@ -73,13 +113,6 @@
 
     /*
     //查询products的条件
-    [query whereKey:@"productPrice" greaterThan:[NSNumber numberWithInt:0]];
-    
-    if (beforeDate!=nil) {
-        [query whereKey:@"createdAt" lessThan:beforeDate];
-    }
-    
-    [query orderByDescending:@"createdAt"];
     query.limit=2;
     query.skip=0;
      */
@@ -98,24 +131,9 @@
             
             //将获取的数据填充入product数组中
             for(AVObject *object in objects) {
-                
-                AVObject* manager=[object objectForKey:@"manager"];
-                AVFile *managerProfile=[manager objectForKey:@"profile"];
-                
-                NSString* oID=[object objectForKey:@"objectId"];
-                NSNumber* productLevel=[object objectForKey:@"productLevel"];
-                NSString* managerName=[manager objectForKey:@"managerName"];
-                NSString* managerProfileImageUrl=managerProfile.url;
-                NSNumber* productMinAmount=[object objectForKey:@"productMinAmount"];
-                NSString* productPeriod=[object objectForKey:@"productPeriod"];
-                NSString* productName=[object objectForKey:@"productName"];
-                NSString* productCategory= [object objectForKey:@"productCategory"];
-                NSDate* updatedAt=[object objectForKey:@"updatedAt"];
-                NSDate* createdAt=[object objectForKey:@"createdAt"];
-                NSNumber* productYieldRate=[object objectForKey:@"productYieldRate"];;
-                
+
                 //生成新的product
-                ProductT *newProduct = [ProductT createProductWithProductName:productName category:productCategory productID:oID level:productLevel minAmount:productMinAmount yieldRate:productYieldRate period:productPeriod createdDate:createdAt updatedDate:updatedAt profileUrl:managerProfileImageUrl managerName:managerName];
+                ProductT *newProduct = [ProductT createProductWithAVObject:object];
                 
                 [reloadedProducts addObject:newProduct];
                 

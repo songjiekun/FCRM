@@ -39,6 +39,8 @@
 		808E651D1B68BCC700314238 /* low.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E651A1B68BCC700314238 /* low.png */; };
 		808E651E1B68BCC700314238 /* middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E651B1B68BCC700314238 /* middle.png */; };
 		808E65211B68CF9B00314238 /* ProductT.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65201B68CF9B00314238 /* ProductT.m */; };
+		80AFB5451B6B7985000A7A13 /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AFB5441B6B7985000A7A13 /* ProductDetailViewController.m */; };
+		80AFB5481B6BA26A000A7A13 /* InternetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AFB5471B6BA26A000A7A13 /* InternetImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,10 @@
 		808E651B1B68BCC700314238 /* middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middle.png; sourceTree = "<group>"; };
 		808E651F1B68CF9B00314238 /* ProductT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductT.h; sourceTree = "<group>"; };
 		808E65201B68CF9B00314238 /* ProductT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductT.m; sourceTree = "<group>"; };
+		80AFB5431B6B7985000A7A13 /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
+		80AFB5441B6B7985000A7A13 /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
+		80AFB5461B6BA26A000A7A13 /* InternetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetImage.h; sourceTree = "<group>"; };
+		80AFB5471B6BA26A000A7A13 /* InternetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +211,7 @@
 		8028D5D31B6A1E270054D0EF /* Reusable Component */ = {
 			isa = PBXGroup;
 			children = (
-				8028D5D61B6A1EFD0054D0EF /* FilterButton */,
+				8028D5D61B6A1EFD0054D0EF /* InternetImage */,
 				8028D5D51B6A1EB00054D0EF /* SimpleFilterPicker */,
 				8028D5D41B6A1E7E0054D0EF /* ProductCell */,
 			);
@@ -232,11 +238,13 @@
 			name = SimpleFilterPicker;
 			sourceTree = "<group>";
 		};
-		8028D5D61B6A1EFD0054D0EF /* FilterButton */ = {
+		8028D5D61B6A1EFD0054D0EF /* InternetImage */ = {
 			isa = PBXGroup;
 			children = (
+				80AFB5461B6BA26A000A7A13 /* InternetImage.h */,
+				80AFB5471B6BA26A000A7A13 /* InternetImage.m */,
 			);
-			name = FilterButton;
+			name = InternetImage;
 			sourceTree = "<group>";
 		};
 		808E65031B68A7B100314238 /* Image Resource */ = {
@@ -268,6 +276,8 @@
 				808E65121B68BA2D00314238 /* ProductCategoriesViewController.m */,
 				8028D5D01B6A139E0054D0EF /* ProductListViewController.h */,
 				8028D5D11B6A139E0054D0EF /* ProductListViewController.m */,
+				80AFB5431B6B7985000A7A13 /* ProductDetailViewController.h */,
+				80AFB5441B6B7985000A7A13 /* ProductDetailViewController.m */,
 				808E650F1B68A8BE00314238 /* ProductList.storyboard */,
 			);
 			name = "Product List Section";
@@ -460,10 +470,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				801A480A1B5F9EEE006D537B /* AppDelegate.m in Sources */,
+				80AFB5451B6B7985000A7A13 /* ProductDetailViewController.m in Sources */,
 				801A48071B5F9EEE006D537B /* main.m in Sources */,
 				801A48101B5F9EEE006D537B /* ViewController.m in Sources */,
 				8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */,
 				808E65171B68BADD00314238 /* ProductTableViewCell.m in Sources */,
+				80AFB5481B6BA26A000A7A13 /* InternetImage.m in Sources */,
 				801A480D1B5F9EEE006D537B /* FCRM.xcdatamodeld in Sources */,
 				808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */,
 				8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */,

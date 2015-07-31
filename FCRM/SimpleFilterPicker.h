@@ -42,5 +42,14 @@ IB_DESIGNABLE
  *@discussion 打开filter
  */
 - (void)toggleOnView;
+/*!
+ *@discussion 根据现在的view高度状态 开或者关filter
+ *@param grayView 背景灰色view
+ */
+- (void)switchView:(UIView*)grayView;
+/*!
+ *@discussion 没有动画 直接关闭filter
+ */
+- (void)hideView;
 
 @end
