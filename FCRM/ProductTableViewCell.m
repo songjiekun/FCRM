@@ -12,6 +12,19 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.backView.layer.borderColor=[UIColor groupTableViewBackgroundColor].CGColor;
+    self.backView.layer.borderWidth=1;
+    self.backView.layer.cornerRadius=5;
+    self.backView.clipsToBounds=TRUE;
+    
+    //self.backView.layer.masksToBounds=false;
+    //self.backView.layer.shadowRadius=2;
+    //self.backView.layer.shadowColor=[UIColor lightGrayColor].CGColor;
+    //self.backView.layer.shadowOpacity=1;
+    //self.backView.layer.shadowOffset=CGSizeMake(0.0,0.0);
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
