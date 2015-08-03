@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <LeanCloudSocial/AVOSCloudSNS.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +30,10 @@
                       clientKey:@"rakn1yd8jh59qhpridc98mqfn1jowl0sb71iv3ldj4n9bm1a"];
     
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [AVOSCloudSNS handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

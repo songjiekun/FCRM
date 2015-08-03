@@ -8,6 +8,8 @@
 
 #import "ProductCategoriesViewController.h"
 #import "ProductListViewController.h"
+#import "ViewHelper.h"
+#import "UserT.h"
 
 @interface ProductCategoriesViewController ()
 
@@ -27,7 +29,7 @@
 }
 
 
-#pragma mark - Navigation
+#pragma mark - Navigation Segue
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -78,6 +80,22 @@
         
     }
     
+    
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    
+    if ([UserT isUserLogin]) {
+        
+        return YES;
+        
+    }
+    else{
+        
+        [ViewHelper popoutLoginWithController:self];
+        return NO;
+        
+    }
     
 }
 

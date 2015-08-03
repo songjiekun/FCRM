@@ -51,7 +51,7 @@
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(isRegisteredForRemoteNotifications)]){
         
         self.tableView.rowHeight= UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight=65+20;
+        self.tableView.estimatedRowHeight=65+20+10;
     }
     
     //去掉系统默认分割线
@@ -178,7 +178,7 @@
     }
     else {
         
-        return 65+20;//图片大小65x65 上下空挡各10;
+        return 65+20+10;//图片大小65x65 上下空挡各10;
     }
     
 }

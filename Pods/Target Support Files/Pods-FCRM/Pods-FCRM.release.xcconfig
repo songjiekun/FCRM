@@ -1,7 +1,7 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AVOSCloud" "${PODS_ROOT}/Headers/Public/AVOSCloudSNS"
-LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/AVOSCloud" "$(PODS_ROOT)/AVOSCloudSNS"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AVOSCloud" -isystem "${PODS_ROOT}/Headers/Public/AVOSCloudSNS"
-OTHER_LDFLAGS = $(inherited) -ObjC -undefined dynamic_lookup -l"AVOSCloudLib" -l"AVOSCloudSNSLib" -l"Pods-FCRM-AVOSCloud" -l"Pods-FCRM-AVOSCloudSNS" -l"icucore" -l"sqlite3" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AVOSCloud" "${PODS_ROOT}/Headers/Public/IQKeyboardManager" "${PODS_ROOT}/Headers/Public/LeanCloudSocial"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/AVOSCloud"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/AVOSCloud" -isystem "${PODS_ROOT}/Headers/Public/IQKeyboardManager" -isystem "${PODS_ROOT}/Headers/Public/LeanCloudSocial"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AVOSCloudLib" -l"Pods-FCRM-AFNetworking" -l"Pods-FCRM-AVOSCloud" -l"Pods-FCRM-IQKeyboardManager" -l"Pods-FCRM-LeanCloudSocial" -l"icucore" -l"sqlite3" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

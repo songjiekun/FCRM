@@ -1,14 +1,40 @@
 PODS:
-  - AVOSCloud (3.1.2.8)
-  - AVOSCloudSNS (3.1.2.8):
-    - AVOSCloud
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AVOSCloud (3.1.2.9)
+  - IQKeyboardManager (3.2.4)
+  - LeanCloudSocial (0.0.5):
+    - AFNetworking (~> 2.0)
+    - AVOSCloud (~> 3.1)
 
 DEPENDENCIES:
-  - AVOSCloud
-  - AVOSCloudSNS
+  - AVOSCloud (= 3.1.2.9)
+  - IQKeyboardManager
+  - LeanCloudSocial (= 0.0.5)
 
 SPEC CHECKSUMS:
-  AVOSCloud: 534bef9ffbf9d9acd7e96f74ca6faf590f4acf28
-  AVOSCloudSNS: 150f87ae8c5e0d7f49e848f220023e6c9699fbe6
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AVOSCloud: 7d2406a4954c15c98363ce841b257b81cdba0bc9
+  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
+  LeanCloudSocial: a142862a9d8968785186ba640e577adb323a5854
 
 COCOAPODS: 0.37.2

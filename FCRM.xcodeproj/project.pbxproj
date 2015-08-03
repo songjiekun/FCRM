@@ -39,8 +39,16 @@
 		808E651D1B68BCC700314238 /* low.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E651A1B68BCC700314238 /* low.png */; };
 		808E651E1B68BCC700314238 /* middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 808E651B1B68BCC700314238 /* middle.png */; };
 		808E65211B68CF9B00314238 /* ProductT.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65201B68CF9B00314238 /* ProductT.m */; };
+		80A3216D1B6DD8C600FFCD9B /* UserLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A3216C1B6DD8C600FFCD9B /* UserLogin.storyboard */; };
+		80A321701B6DE5F200FFCD9B /* UserT.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A3216F1B6DE5F200FFCD9B /* UserT.m */; };
+		80A321741B6DE8E400FFCD9B /* ViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A321731B6DE8E400FFCD9B /* ViewHelper.m */; };
+		80A321771B6DF83900FFCD9B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A321761B6DF83900FFCD9B /* LoginViewController.m */; };
+		80A3217A1B6DF84800FFCD9B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A321791B6DF84800FFCD9B /* RegisterViewController.m */; };
+		80A3217C1B6E049400FFCD9B /* money-bag-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A3217B1B6E049400FFCD9B /* money-bag-icon.png */; };
 		80AFB5451B6B7985000A7A13 /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AFB5441B6B7985000A7A13 /* ProductDetailViewController.m */; };
 		80AFB5481B6BA26A000A7A13 /* InternetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AFB5471B6BA26A000A7A13 /* InternetImage.m */; };
+		80DC79CC1B6F1447009015DC /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DC79CA1B6F1447009015DC /* qq.png */; };
+		80DC79CD1B6F1447009015DC /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DC79CB1B6F1447009015DC /* wechat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,10 +107,22 @@
 		808E651B1B68BCC700314238 /* middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middle.png; sourceTree = "<group>"; };
 		808E651F1B68CF9B00314238 /* ProductT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductT.h; sourceTree = "<group>"; };
 		808E65201B68CF9B00314238 /* ProductT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductT.m; sourceTree = "<group>"; };
+		80A3216C1B6DD8C600FFCD9B /* UserLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserLogin.storyboard; sourceTree = "<group>"; };
+		80A3216E1B6DE5F200FFCD9B /* UserT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserT.h; sourceTree = "<group>"; };
+		80A3216F1B6DE5F200FFCD9B /* UserT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserT.m; sourceTree = "<group>"; };
+		80A321721B6DE8E400FFCD9B /* ViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewHelper.h; sourceTree = "<group>"; };
+		80A321731B6DE8E400FFCD9B /* ViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewHelper.m; sourceTree = "<group>"; };
+		80A321751B6DF83900FFCD9B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		80A321761B6DF83900FFCD9B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		80A321781B6DF84800FFCD9B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		80A321791B6DF84800FFCD9B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		80A3217B1B6E049400FFCD9B /* money-bag-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money-bag-icon.png"; sourceTree = "<group>"; };
 		80AFB5431B6B7985000A7A13 /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
 		80AFB5441B6B7985000A7A13 /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 		80AFB5461B6BA26A000A7A13 /* InternetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetImage.h; sourceTree = "<group>"; };
 		80AFB5471B6BA26A000A7A13 /* InternetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetImage.m; sourceTree = "<group>"; };
+		80DC79CA1B6F1447009015DC /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
+		80DC79CB1B6F1447009015DC /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,9 +184,11 @@
 		801A48031B5F9EEE006D537B /* FCRM */ = {
 			isa = PBXGroup;
 			children = (
+				80A321711B6DE8CB00FFCD9B /* Helper */,
 				8028D5D31B6A1E270054D0EF /* Reusable Component */,
 				808E652B1B6901D300314238 /* Segue */,
 				808E65221B68CFBB00314238 /* Model */,
+				80A3216B1B6DD89500FFCD9B /* User Login Section */,
 				808E650E1B68A82F00314238 /* Product List Section */,
 				808E65031B68A7B100314238 /* Image Resource */,
 				801A48081B5F9EEE006D537B /* AppDelegate.h */,
@@ -222,8 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				808E65151B68BADD00314238 /* ProductTableViewCell.m */,
-				808E65161B68BADD00314238 /* ProductTableViewCell.xib */,
 				808E65141B68BADD00314238 /* ProductTableViewCell.h */,
+				808E65161B68BADD00314238 /* ProductTableViewCell.xib */,
 			);
 			name = ProductCell;
 			sourceTree = "<group>";
@@ -250,6 +272,9 @@
 		808E65031B68A7B100314238 /* Image Resource */ = {
 			isa = PBXGroup;
 			children = (
+				80DC79CA1B6F1447009015DC /* qq.png */,
+				80DC79CB1B6F1447009015DC /* wechat.png */,
+				80A3217B1B6E049400FFCD9B /* money-bag-icon.png */,
 				808E651A1B68BCC700314238 /* low.png */,
 				8028D5CC1B69D9A10054D0EF /* low@2x.png */,
 				8028D5CD1B69D9A10054D0EF /* low@3x.png */,
@@ -297,6 +322,8 @@
 			children = (
 				808E651F1B68CF9B00314238 /* ProductT.h */,
 				808E65201B68CF9B00314238 /* ProductT.m */,
+				80A3216E1B6DE5F200FFCD9B /* UserT.h */,
+				80A3216F1B6DE5F200FFCD9B /* UserT.m */,
 			);
 			name = Transient;
 			sourceTree = "<group>";
@@ -313,6 +340,27 @@
 			children = (
 			);
 			name = Segue;
+			sourceTree = "<group>";
+		};
+		80A3216B1B6DD89500FFCD9B /* User Login Section */ = {
+			isa = PBXGroup;
+			children = (
+				80A3216C1B6DD8C600FFCD9B /* UserLogin.storyboard */,
+				80A321751B6DF83900FFCD9B /* LoginViewController.h */,
+				80A321761B6DF83900FFCD9B /* LoginViewController.m */,
+				80A321781B6DF84800FFCD9B /* RegisterViewController.h */,
+				80A321791B6DF84800FFCD9B /* RegisterViewController.m */,
+			);
+			name = "User Login Section";
+			sourceTree = "<group>";
+		};
+		80A321711B6DE8CB00FFCD9B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				80A321721B6DE8E400FFCD9B /* ViewHelper.h */,
+				80A321731B6DE8E400FFCD9B /* ViewHelper.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,8 +449,11 @@
 				8028D5CA1B69D98C0054D0EF /* middle@2x.png in Resources */,
 				8028D5C81B69D98C0054D0EF /* high@2x.png in Resources */,
 				808E651D1B68BCC700314238 /* low.png in Resources */,
+				80DC79CD1B6F1447009015DC /* wechat.png in Resources */,
 				8028D5BF1B69D4BC0054D0EF /* duichongicon.png in Resources */,
+				80A3217C1B6E049400FFCD9B /* money-bag-icon.png in Resources */,
 				808E65101B68A8BE00314238 /* ProductList.storyboard in Resources */,
+				80A3216D1B6DD8C600FFCD9B /* UserLogin.storyboard in Resources */,
 				801A48131B5F9EEE006D537B /* Main.storyboard in Resources */,
 				8028D5CF1B69D9A10054D0EF /* low@3x.png in Resources */,
 				8028D5C11B69D4BC0054D0EF /* huobiicon.png in Resources */,
@@ -415,6 +466,7 @@
 				808E65181B68BADD00314238 /* ProductTableViewCell.xib in Resources */,
 				808E651C1B68BCC700314238 /* high.png in Resources */,
 				808E651E1B68BCC700314238 /* middle.png in Resources */,
+				80DC79CC1B6F1447009015DC /* qq.png in Resources */,
 				8028D5BE1B69D4BC0054D0EF /* baoxianicon.png in Resources */,
 				8028D5CE1B69D9A10054D0EF /* low@2x.png in Resources */,
 				8028D5C01B69D4BC0054D0EF /* gupiaoicon.png in Resources */,
@@ -473,11 +525,15 @@
 				80AFB5451B6B7985000A7A13 /* ProductDetailViewController.m in Sources */,
 				801A48071B5F9EEE006D537B /* main.m in Sources */,
 				801A48101B5F9EEE006D537B /* ViewController.m in Sources */,
+				80A321771B6DF83900FFCD9B /* LoginViewController.m in Sources */,
 				8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */,
 				808E65171B68BADD00314238 /* ProductTableViewCell.m in Sources */,
 				80AFB5481B6BA26A000A7A13 /* InternetImage.m in Sources */,
+				80A321741B6DE8E400FFCD9B /* ViewHelper.m in Sources */,
 				801A480D1B5F9EEE006D537B /* FCRM.xcdatamodeld in Sources */,
+				80A3217A1B6DF84800FFCD9B /* RegisterViewController.m in Sources */,
 				808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */,
+				80A321701B6DE5F200FFCD9B /* UserT.m in Sources */,
 				8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */,
 				808E65211B68CF9B00314238 /* ProductT.m in Sources */,
 			);

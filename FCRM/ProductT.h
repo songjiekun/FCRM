@@ -24,7 +24,6 @@
 @property (nonatomic, retain) NSDate* updatedAt;
 @property (nonatomic, retain) NSNumber* productYieldRate;
 @property (nonatomic, retain) NSNumber* userScore;
-
 /*!
  *@discussion 互联网上获取图片
  */

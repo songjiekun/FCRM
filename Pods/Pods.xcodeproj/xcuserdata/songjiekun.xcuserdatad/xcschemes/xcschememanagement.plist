@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-FCRM-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FCRM-AVOSCloud.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FCRM-AVOSCloudSNS.xcscheme</key>
+		<key>Pods-FCRM-IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FCRM-LeanCloudSocial.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B69332FA0F0F6DDA49F0C518</key>
+		<key>0D4C667682396711941F573F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA7978F736FDBAE84AD90368</key>
+		<key>1A8476915CB6FAFDF703229B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8A5D2D9E0215E9ACCE7DBB1</key>
+		<key>1C0F63D45FEAEC3BFBBFEE8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2C06BFFC4A2B33FCC4E9AF4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8EAD5C91E66EAA9CB920588</key>
 		<dict>
 			<key>primary</key>
 			<true/>
