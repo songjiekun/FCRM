@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A583AC6-7878-405D-8E7E-47C9797D2E26</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FCRM</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>566F1FA7FDEEDCD5D8C3915AB485D033F4740885</key>
+		<string>https://github.com/songjiekun/FCRM.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FCRM.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>566F1FA7FDEEDCD5D8C3915AB485D033F4740885</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/songjiekun/FCRM.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>566F1FA7FDEEDCD5D8C3915AB485D033F4740885</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>566F1FA7FDEEDCD5D8C3915AB485D033F4740885</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FCRM</string>
+		</dict>
+	</array>
+</dict>
+</plist>
