@@ -16,6 +16,13 @@
 		801A48151B5F9EEE006D537B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A48141B5F9EEE006D537B /* Images.xcassets */; };
 		801A48181B5F9EEE006D537B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801A48161B5F9EEE006D537B /* LaunchScreen.xib */; };
 		801A48241B5F9EEF006D537B /* FCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A48231B5F9EEF006D537B /* FCRMTests.m */; };
+		802834D51B7098A000CEC4BA /* ClientTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 802834D31B7098A000CEC4BA /* ClientTableViewCell.m */; };
+		802834D61B7098A000CEC4BA /* ClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 802834D41B7098A000CEC4BA /* ClientTableViewCell.xib */; };
+		802834D91B70A1EE00CEC4BA /* ClientList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802834D81B70A1EE00CEC4BA /* ClientList.storyboard */; };
+		802834DC1B70A26300CEC4BA /* ClientListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802834DB1B70A26300CEC4BA /* ClientListViewController.m */; };
+		802834E21B70A47900CEC4BA /* ClientMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 802834E11B70A47900CEC4BA /* ClientMore.m */; };
+		802834E81B70E60400CEC4BA /* CreateClientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802834E71B70E60400CEC4BA /* CreateClientTableViewController.m */; };
+		802834EB1B71022D00CEC4BA /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 802834EA1B71022D00CEC4BA /* Client.m */; };
 		8028D5BE1B69D4BC0054D0EF /* baoxianicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5B81B69D4BC0054D0EF /* baoxianicon.png */; };
 		8028D5BF1B69D4BC0054D0EF /* duichongicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5B91B69D4BC0054D0EF /* duichongicon.png */; };
 		8028D5C01B69D4BC0054D0EF /* gupiaoicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5BA1B69D4BC0054D0EF /* gupiaoicon.png */; };
@@ -31,6 +38,7 @@
 		8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5D11B6A139E0054D0EF /* ProductListViewController.m */; };
 		8028D5DD1B6A1FC20054D0EF /* SimpleFilterPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8028D5DC1B6A1FC20054D0EF /* SimpleFilterPicker.xib */; };
 		8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028D5DF1B6A200C0054D0EF /* SimpleFilterPicker.m */; };
+		806342AC1B71F18000F7A64E /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806342AB1B71F18000F7A64E /* checkmark@2x.png */; };
 		808E65101B68A8BE00314238 /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808E650F1B68A8BE00314238 /* ProductList.storyboard */; };
 		808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65121B68BA2D00314238 /* ProductCategoriesViewController.m */; };
 		808E65171B68BADD00314238 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 808E65151B68BADD00314238 /* ProductTableViewCell.m */; };
@@ -79,6 +87,18 @@
 		801A481D1B5F9EEF006D537B /* FCRMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCRMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801A48221B5F9EEF006D537B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		801A48231B5F9EEF006D537B /* FCRMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCRMTests.m; sourceTree = "<group>"; };
+		802834D21B7098A000CEC4BA /* ClientTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientTableViewCell.h; sourceTree = "<group>"; };
+		802834D31B7098A000CEC4BA /* ClientTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientTableViewCell.m; sourceTree = "<group>"; };
+		802834D41B7098A000CEC4BA /* ClientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientTableViewCell.xib; sourceTree = "<group>"; };
+		802834D81B70A1EE00CEC4BA /* ClientList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientList.storyboard; sourceTree = "<group>"; };
+		802834DA1B70A26300CEC4BA /* ClientListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientListViewController.h; sourceTree = "<group>"; };
+		802834DB1B70A26300CEC4BA /* ClientListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientListViewController.m; sourceTree = "<group>"; };
+		802834E01B70A47900CEC4BA /* ClientMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientMore.h; sourceTree = "<group>"; };
+		802834E11B70A47900CEC4BA /* ClientMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientMore.m; sourceTree = "<group>"; };
+		802834E61B70E60400CEC4BA /* CreateClientTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateClientTableViewController.h; sourceTree = "<group>"; };
+		802834E71B70E60400CEC4BA /* CreateClientTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateClientTableViewController.m; sourceTree = "<group>"; };
+		802834E91B71022D00CEC4BA /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		802834EA1B71022D00CEC4BA /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 		8028D5B81B69D4BC0054D0EF /* baoxianicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baoxianicon.png; sourceTree = "<group>"; };
 		8028D5B91B69D4BC0054D0EF /* duichongicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duichongicon.png; sourceTree = "<group>"; };
 		8028D5BA1B69D4BC0054D0EF /* gupiaoicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gupiaoicon.png; sourceTree = "<group>"; };
@@ -96,6 +116,7 @@
 		8028D5DC1B6A1FC20054D0EF /* SimpleFilterPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFilterPicker.xib; sourceTree = "<group>"; };
 		8028D5DE1B6A200C0054D0EF /* SimpleFilterPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFilterPicker.h; sourceTree = "<group>"; };
 		8028D5DF1B6A200C0054D0EF /* SimpleFilterPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFilterPicker.m; sourceTree = "<group>"; };
+		806342AB1B71F18000F7A64E /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
 		808E650F1B68A8BE00314238 /* ProductList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
 		808E65111B68BA2D00314238 /* ProductCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoriesViewController.h; sourceTree = "<group>"; };
 		808E65121B68BA2D00314238 /* ProductCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoriesViewController.m; sourceTree = "<group>"; };
@@ -189,6 +210,7 @@
 				808E652B1B6901D300314238 /* Segue */,
 				808E65221B68CFBB00314238 /* Model */,
 				80A3216B1B6DD89500FFCD9B /* User Login Section */,
+				802834D71B70A1B800CEC4BA /* Client List Section */,
 				808E650E1B68A82F00314238 /* Product List Section */,
 				808E65031B68A7B100314238 /* Image Resource */,
 				801A48081B5F9EEE006D537B /* AppDelegate.h */,
@@ -230,9 +252,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		802834D11B70986F00CEC4BA /* ClientCell */ = {
+			isa = PBXGroup;
+			children = (
+				802834D21B7098A000CEC4BA /* ClientTableViewCell.h */,
+				802834D31B7098A000CEC4BA /* ClientTableViewCell.m */,
+				802834D41B7098A000CEC4BA /* ClientTableViewCell.xib */,
+			);
+			name = ClientCell;
+			sourceTree = "<group>";
+		};
+		802834D71B70A1B800CEC4BA /* Client List Section */ = {
+			isa = PBXGroup;
+			children = (
+				802834DA1B70A26300CEC4BA /* ClientListViewController.h */,
+				802834DB1B70A26300CEC4BA /* ClientListViewController.m */,
+				802834E61B70E60400CEC4BA /* CreateClientTableViewController.h */,
+				802834E71B70E60400CEC4BA /* CreateClientTableViewController.m */,
+				802834D81B70A1EE00CEC4BA /* ClientList.storyboard */,
+			);
+			name = "Client List Section";
+			sourceTree = "<group>";
+		};
 		8028D5D31B6A1E270054D0EF /* Reusable Component */ = {
 			isa = PBXGroup;
 			children = (
+				802834D11B70986F00CEC4BA /* ClientCell */,
 				8028D5D61B6A1EFD0054D0EF /* InternetImage */,
 				8028D5D51B6A1EB00054D0EF /* SimpleFilterPicker */,
 				8028D5D41B6A1E7E0054D0EF /* ProductCell */,
@@ -272,6 +317,7 @@
 		808E65031B68A7B100314238 /* Image Resource */ = {
 			isa = PBXGroup;
 			children = (
+				806342AB1B71F18000F7A64E /* checkmark@2x.png */,
 				80DC79CA1B6F1447009015DC /* qq.png */,
 				80DC79CB1B6F1447009015DC /* wechat.png */,
 				80A3217B1B6E049400FFCD9B /* money-bag-icon.png */,
@@ -331,6 +377,10 @@
 		808E65271B68DB0D00314238 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				802834E01B70A47900CEC4BA /* ClientMore.h */,
+				802834E11B70A47900CEC4BA /* ClientMore.m */,
+				802834E91B71022D00CEC4BA /* Client.h */,
+				802834EA1B71022D00CEC4BA /* Client.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -452,9 +502,11 @@
 				80DC79CD1B6F1447009015DC /* wechat.png in Resources */,
 				8028D5BF1B69D4BC0054D0EF /* duichongicon.png in Resources */,
 				80A3217C1B6E049400FFCD9B /* money-bag-icon.png in Resources */,
+				806342AC1B71F18000F7A64E /* checkmark@2x.png in Resources */,
 				808E65101B68A8BE00314238 /* ProductList.storyboard in Resources */,
 				80A3216D1B6DD8C600FFCD9B /* UserLogin.storyboard in Resources */,
 				801A48131B5F9EEE006D537B /* Main.storyboard in Resources */,
+				802834D91B70A1EE00CEC4BA /* ClientList.storyboard in Resources */,
 				8028D5CF1B69D9A10054D0EF /* low@3x.png in Resources */,
 				8028D5C11B69D4BC0054D0EF /* huobiicon.png in Resources */,
 				801A48181B5F9EEE006D537B /* LaunchScreen.xib in Resources */,
@@ -468,6 +520,7 @@
 				808E651E1B68BCC700314238 /* middle.png in Resources */,
 				80DC79CC1B6F1447009015DC /* qq.png in Resources */,
 				8028D5BE1B69D4BC0054D0EF /* baoxianicon.png in Resources */,
+				802834D61B7098A000CEC4BA /* ClientTableViewCell.xib in Resources */,
 				8028D5CE1B69D9A10054D0EF /* low@2x.png in Resources */,
 				8028D5C01B69D4BC0054D0EF /* gupiaoicon.png in Resources */,
 				8028D5DD1B6A1FC20054D0EF /* SimpleFilterPicker.xib in Resources */,
@@ -523,7 +576,10 @@
 			files = (
 				801A480A1B5F9EEE006D537B /* AppDelegate.m in Sources */,
 				80AFB5451B6B7985000A7A13 /* ProductDetailViewController.m in Sources */,
+				802834E81B70E60400CEC4BA /* CreateClientTableViewController.m in Sources */,
+				802834D51B7098A000CEC4BA /* ClientTableViewCell.m in Sources */,
 				801A48071B5F9EEE006D537B /* main.m in Sources */,
+				802834E21B70A47900CEC4BA /* ClientMore.m in Sources */,
 				801A48101B5F9EEE006D537B /* ViewController.m in Sources */,
 				80A321771B6DF83900FFCD9B /* LoginViewController.m in Sources */,
 				8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */,
@@ -532,10 +588,12 @@
 				80A321741B6DE8E400FFCD9B /* ViewHelper.m in Sources */,
 				801A480D1B5F9EEE006D537B /* FCRM.xcdatamodeld in Sources */,
 				80A3217A1B6DF84800FFCD9B /* RegisterViewController.m in Sources */,
+				802834EB1B71022D00CEC4BA /* Client.m in Sources */,
 				808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */,
 				80A321701B6DE5F200FFCD9B /* UserT.m in Sources */,
 				8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */,
 				808E65211B68CF9B00314238 /* ProductT.m in Sources */,
+				802834DC1B70A26300CEC4BA /* ClientListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

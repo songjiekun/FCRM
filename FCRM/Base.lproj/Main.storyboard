@@ -40,6 +40,15 @@
                                     <action selector="goToProductList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fGS-iD-GtG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-5H-qFa">
+                                <rect key="frame" x="31" y="312" width="46" height="30"/>
+                                <state key="normal" title="client">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToClientList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="z7o-0w-aXu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

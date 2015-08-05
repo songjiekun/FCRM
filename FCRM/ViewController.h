@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 - (IBAction)goToProductList:(id)sender;
 
+- (IBAction)goToClientList:(id)sender;
+
 
 @end
 

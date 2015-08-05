@@ -9,6 +9,7 @@
 #import "ProductListViewController.h"
 #import "ProductTableViewCell.h"
 #import "ProductDetailViewController.h"
+#import "ViewHelper.h"
 
 @interface ProductListViewController ()
 
@@ -80,6 +81,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - target action回调方法
+/*!
+ *@discussion 更新tableview
+ */
+-(void)reloadProductList:(NSMutableArray*)reloadedProducts{
+    
+    //重新载入tableview数据
+    self.products=reloadedProducts;
+    [self.tableView reloadData];
+    
+    //灰色view隐藏掉
+    self.grayView.hidden=YES;
+    
 }
 
 
@@ -157,8 +174,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductTableViewCell" forIndexPath:indexPath];
+
+    //获取对应的product
+    ProductT *product = [self.products objectAtIndex:indexPath.row];
     
-    [self configureCell:cell atIndexPath:indexPath];
+    [ViewHelper configureProductCell:cell product:product];
     
     return cell;
 }
@@ -240,9 +260,8 @@
 
 
 #pragma mark - helper 方法
-/*!
- *@discussion 填充tableviewcell
- */
+/*
+
 - (void)configureCell:(ProductTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     //获取对应的product
@@ -276,20 +295,9 @@
     }
     
 }
+*/
 
-/*!
- *@discussion 更新tableview
- */
--(void)reloadProductList:(NSMutableArray*)reloadedProducts{
-    
-    //重新载入tableview数据
-    self.products=reloadedProducts;
-    [self.tableView reloadData];
-    
-    //灰色view隐藏掉
-    self.grayView.hidden=YES;
-    
-}
+
 
 #pragma mark - click action 方法
 

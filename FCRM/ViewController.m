@@ -40,4 +40,22 @@
     [productListNavigationController didMoveToParentViewController:self];
     
 }
+
+- (IBAction)goToClientList:(id)sender{
+    
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"ClientList" bundle:nil];
+    
+    UINavigationController *clientListNavigationController=[storyboard instantiateViewControllerWithIdentifier:@"ClientListNavigationController"];
+    
+    //ProductCategoriesViewController *productCategoriesViewController=((ProductCategoriesViewController *)[clientListNavigationController.viewControllers objectAtIndex:0]);
+    
+    
+    //[self presentViewController:productCategoriesViewController animated:YES completion:nil];
+    [self addChildViewController:clientListNavigationController];
+    [self.view addSubview:clientListNavigationController.view];
+    [clientListNavigationController didMoveToParentViewController:self];
+    
+    
+}
+
 @end
