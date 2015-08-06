@@ -57,6 +57,8 @@
 		80AFB5481B6BA26A000A7A13 /* InternetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AFB5471B6BA26A000A7A13 /* InternetImage.m */; };
 		80DC79CC1B6F1447009015DC /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DC79CA1B6F1447009015DC /* qq.png */; };
 		80DC79CD1B6F1447009015DC /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DC79CB1B6F1447009015DC /* wechat.png */; };
+		80FF81711B7371C200044DEF /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FF816F1B7371C200044DEF /* TaskTableViewCell.m */; };
+		80FF81721B7371C200044DEF /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FF81701B7371C200044DEF /* TaskTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,9 @@
 		80AFB5471B6BA26A000A7A13 /* InternetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetImage.m; sourceTree = "<group>"; };
 		80DC79CA1B6F1447009015DC /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
 		80DC79CB1B6F1447009015DC /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
+		80FF816E1B7371C200044DEF /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		80FF816F1B7371C200044DEF /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		80FF81701B7371C200044DEF /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +282,7 @@
 		8028D5D31B6A1E270054D0EF /* Reusable Component */ = {
 			isa = PBXGroup;
 			children = (
+				80FF816D1B73718D00044DEF /* TaskCell */,
 				802834D11B70986F00CEC4BA /* ClientCell */,
 				8028D5D61B6A1EFD0054D0EF /* InternetImage */,
 				8028D5D51B6A1EB00054D0EF /* SimpleFilterPicker */,
@@ -413,6 +419,16 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
+		80FF816D1B73718D00044DEF /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				80FF816E1B7371C200044DEF /* TaskTableViewCell.h */,
+				80FF816F1B7371C200044DEF /* TaskTableViewCell.m */,
+				80FF81701B7371C200044DEF /* TaskTableViewCell.xib */,
+			);
+			name = TaskCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -521,6 +537,7 @@
 				80DC79CC1B6F1447009015DC /* qq.png in Resources */,
 				8028D5BE1B69D4BC0054D0EF /* baoxianicon.png in Resources */,
 				802834D61B7098A000CEC4BA /* ClientTableViewCell.xib in Resources */,
+				80FF81721B7371C200044DEF /* TaskTableViewCell.xib in Resources */,
 				8028D5CE1B69D9A10054D0EF /* low@2x.png in Resources */,
 				8028D5C01B69D4BC0054D0EF /* gupiaoicon.png in Resources */,
 				8028D5DD1B6A1FC20054D0EF /* SimpleFilterPicker.xib in Resources */,
@@ -591,6 +608,7 @@
 				802834EB1B71022D00CEC4BA /* Client.m in Sources */,
 				808E65131B68BA2D00314238 /* ProductCategoriesViewController.m in Sources */,
 				80A321701B6DE5F200FFCD9B /* UserT.m in Sources */,
+				80FF81711B7371C200044DEF /* TaskTableViewCell.m in Sources */,
 				8028D5D21B6A139E0054D0EF /* ProductListViewController.m in Sources */,
 				808E65211B68CF9B00314238 /* ProductT.m in Sources */,
 				802834DC1B70A26300CEC4BA /* ClientListViewController.m in Sources */,

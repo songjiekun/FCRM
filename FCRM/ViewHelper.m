@@ -9,6 +9,7 @@
 #import "ViewHelper.h"
 
 
+
 @implementation ViewHelper
 
 +(void)popoutLoginWithController:(UIViewController *)vc{
@@ -19,6 +20,18 @@
     
     
     [vc presentViewController:loginNavigationController animated:YES completion:nil];
+    
+}
+
++(ClientListViewController*)popoutClientListControllerToSelect:(UIViewController *)vc{
+    
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"ClientList" bundle:nil];
+    
+    ClientListViewController *clientListViewController=[storyboard instantiateViewControllerWithIdentifier:@"ClientListViewController"];
+    
+    [vc.navigationController pushViewController:clientListViewController animated:YES];
+    
+    return clientListViewController;
     
 }
 

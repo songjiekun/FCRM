@@ -34,7 +34,7 @@
         <!--客户库-->
         <scene sceneID="5BG-gb-GFz">
             <objects>
-                <viewController id="6mL-DN-Qsx" customClass="ClientListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClientListViewController" id="6mL-DN-Qsx" customClass="ClientListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gqk-yB-A4N"/>
                         <viewControllerLayoutGuide type="bottom" id="8NE-eh-k6L"/>
@@ -45,13 +45,13 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="q2C-Fu-Ymg">
                                 <rect key="frame" x="0.0" y="44" width="320" height="460"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6mL-DN-Qsx" id="71I-5d-Taz"/>
                                     <outlet property="delegate" destination="6mL-DN-Qsx" id="bdS-Pa-KOO"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dik-wP-ReL">
+                            <searchBar contentMode="redraw" placeholder="搜索客户名字" translatesAutoresizingMaskIntoConstraints="NO" id="dik-wP-ReL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Zqd-3d-TjL"/>
@@ -106,7 +106,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="aE3-VI-jVF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="doa-9O-B3j">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
@@ -147,8 +147,8 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fUA-iU-2Jq" firstAttribute="leading" secondItem="eHF-99-MKM" secondAttribute="leadingMargin" id="4fw-wc-sQs"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fUA-iU-2Jq" secondAttribute="trailing" id="VyO-3s-cYU"/>
+                                                <constraint firstItem="fUA-iU-2Jq" firstAttribute="leading" secondItem="eHF-99-MKM" secondAttribute="leadingMargin" priority="750" id="4fw-wc-sQs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fUA-iU-2Jq" secondAttribute="trailing" priority="750" id="VyO-3s-cYU"/>
                                                 <constraint firstAttribute="centerY" secondItem="fUA-iU-2Jq" secondAttribute="centerY" id="Ycj-vs-Svd"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -165,9 +165,9 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ZAz-Gs-sgY" secondAttribute="trailing" id="Naz-Ja-Vt2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZAz-Gs-sgY" secondAttribute="trailing" priority="750" id="Naz-Ja-Vt2"/>
                                                 <constraint firstAttribute="centerY" secondItem="ZAz-Gs-sgY" secondAttribute="centerY" id="R8B-2t-7Lq"/>
-                                                <constraint firstItem="ZAz-Gs-sgY" firstAttribute="leading" secondItem="P1L-RT-Nxx" secondAttribute="leadingMargin" id="deO-u8-Q8a"/>
+                                                <constraint firstItem="ZAz-Gs-sgY" firstAttribute="leading" secondItem="P1L-RT-Nxx" secondAttribute="leadingMargin" priority="750" id="deO-u8-Q8a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -184,8 +184,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="h8Q-9i-QzZ" secondAttribute="centerY" id="4Cc-fT-HMs"/>
-                                                <constraint firstItem="h8Q-9i-QzZ" firstAttribute="leading" secondItem="KBF-Cn-IAJ" secondAttribute="leadingMargin" id="KcI-fj-T9W"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="h8Q-9i-QzZ" secondAttribute="trailing" id="TOz-3t-yej"/>
+                                                <constraint firstItem="h8Q-9i-QzZ" firstAttribute="leading" secondItem="KBF-Cn-IAJ" secondAttribute="leadingMargin" priority="750" id="KcI-fj-T9W"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="h8Q-9i-QzZ" secondAttribute="trailing" priority="750" id="TOz-3t-yej"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -201,8 +201,8 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ovh-cm-g5n" secondAttribute="trailing" id="0dB-PA-EuR"/>
-                                                <constraint firstItem="Ovh-cm-g5n" firstAttribute="leading" secondItem="xuv-7G-tzP" secondAttribute="leadingMargin" id="Oxa-r3-tT4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ovh-cm-g5n" secondAttribute="trailing" priority="750" id="0dB-PA-EuR"/>
+                                                <constraint firstItem="Ovh-cm-g5n" firstAttribute="leading" secondItem="xuv-7G-tzP" secondAttribute="leadingMargin" priority="750" id="Oxa-r3-tT4"/>
                                                 <constraint firstAttribute="centerY" secondItem="Ovh-cm-g5n" secondAttribute="centerY" id="Ytb-sn-MPu"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -220,8 +220,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="pnG-n8-MOu" secondAttribute="centerY" id="LS9-fO-e1r"/>
-                                                <constraint firstItem="pnG-n8-MOu" firstAttribute="leading" secondItem="qIS-Cc-rmj" secondAttribute="leadingMargin" id="Rm9-H0-iLD"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pnG-n8-MOu" secondAttribute="trailing" id="rmP-2k-Cun"/>
+                                                <constraint firstItem="pnG-n8-MOu" firstAttribute="leading" secondItem="qIS-Cc-rmj" secondAttribute="leadingMargin" priority="750" id="Rm9-H0-iLD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pnG-n8-MOu" secondAttribute="trailing" priority="750" id="rmP-2k-Cun"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

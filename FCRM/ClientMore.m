@@ -128,6 +128,33 @@
     
 }
 
+-(void)recommendedWithProduct:(ProductT*)product withTarget:(id)target action:(SEL)recommendedSuccessfully{
+    
+    AVObject *recommendationObject = [AVObject objectWithClassName:@"Recommendation"];
+    //关联client product 和 当前的用户
+    [recommendationObject setObject:[AVUser currentUser] forKey:@"recommendedBy"];
+    [recommendationObject setObject:[AVObject objectWithoutDataWithClassName:@"Client" objectId:self.oID] forKey:@"recommendedTo"];
+    [recommendationObject setObject:[AVObject objectWithoutDataWithClassName:@"Product" objectId:product.oID] forKey:@"recommendedWith"];
+    
+    //存入cloudlean服务器
+    [recommendationObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (succeeded) {
+            
+            //回到发送界面，显示推荐成功信息
+            [target performSelector:recommendedSuccessfully];
+              
+        }
+        else{
+#warning 提示出错信息
+            NSLog(@"%@",error);
+        }
+        
+    }];
+
+    
+}
+
 //从intrnet载入clients
 +(void)reloadClients:(id)target action:(SEL)reload byUser:(AVUser*)currentUser context:(NSManagedObjectContext *)managedObjectContext{
     

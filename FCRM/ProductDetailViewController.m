@@ -7,6 +7,8 @@
 //
 
 #import "ProductDetailViewController.h"
+#import "ViewHelper.h"
+#import "ClientListViewController.h"
 
 @interface ProductDetailViewController ()
 
@@ -69,6 +71,9 @@
     //从internet获取图片
     self.product.managerProfileInternetImage.delegate=self;
     self.managerProfileImageView.image=[self.product.managerProfileInternetImage retrieveImage:self.managerProfileImageView fromCache:self.imageCache atIOQueue:self.ioQueue atInternetQueue:self.internetQueue];
+    
+    //下一个controller的返回按钮文字
+    self.navigationItem.title=self.product.productName;
 }
 
 //此时frame已近全部计算出
@@ -111,6 +116,15 @@
         self.managerProfileImageView.alpha=1;
         
     }];
+    
+}
+
+#pragma mark - click action 方法
+- (IBAction)recommendToClient:(id)sender{
+    
+    ClientListViewController *clientListvc=[ViewHelper popoutClientListControllerToSelect:self];
+    clientListvc.isSelectionMod=YES;
+    clientListvc.product=self.product;
     
 }
 

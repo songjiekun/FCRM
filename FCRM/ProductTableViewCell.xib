@@ -23,7 +23,7 @@
                         <rect key="frame" x="15" y="15" width="65" height="65"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="8yw-PC-w4a" secondAttribute="height" multiplier="1:1" id="DC9-ZC-nlO"/>
-                            <constraint firstAttribute="height" constant="65" id="Y8T-qc-Enw"/>
+                            <constraint firstAttribute="height" priority="999" constant="65" id="Y8T-qc-Enw"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fS-ow-dEW">
@@ -116,7 +116,6 @@
                     <constraint firstAttribute="bottom" secondItem="cAa-pw-xvv" secondAttribute="bottom" constant="5" id="4dZ-va-shr"/>
                     <constraint firstItem="cAa-pw-xvv" firstAttribute="bottom" secondItem="4cm-d2-hWd" secondAttribute="bottom" id="5pT-V2-1SH"/>
                     <constraint firstItem="Btj-QY-QgN" firstAttribute="leading" secondItem="cAa-pw-xvv" secondAttribute="leading" constant="3" id="7D9-bP-bav"/>
-                    <constraint firstAttribute="bottom" secondItem="Btj-QY-QgN" secondAttribute="bottom" id="ErV-1f-lwq"/>
                     <constraint firstItem="cAa-pw-xvv" firstAttribute="bottom" secondItem="8yw-PC-w4a" secondAttribute="bottom" constant="10" id="GWI-ya-aNH"/>
                     <constraint firstItem="6fS-ow-dEW" firstAttribute="centerY" secondItem="8yw-PC-w4a" secondAttribute="centerY" id="KHc-le-Bva"/>
                     <constraint firstItem="cAa-pw-xvv" firstAttribute="trailing" secondItem="4cm-d2-hWd" secondAttribute="trailing" id="Lx8-7s-GhG"/>
@@ -124,22 +123,11 @@
                     <constraint firstItem="Btj-QY-QgN" firstAttribute="bottom" secondItem="cAa-pw-xvv" secondAttribute="bottom" id="aE1-dy-Zva"/>
                     <constraint firstItem="Btj-QY-QgN" firstAttribute="trailing" secondItem="cAa-pw-xvv" secondAttribute="trailing" constant="-3" id="c8C-AF-G4K"/>
                     <constraint firstItem="cAa-pw-xvv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="eFN-y9-YFI"/>
-                    <constraint firstAttribute="trailing" secondItem="Btj-QY-QgN" secondAttribute="trailing" id="hiM-vJ-Uau"/>
                     <constraint firstItem="cAa-pw-xvv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="jlv-x2-WLn"/>
-                    <constraint firstItem="Btj-QY-QgN" firstAttribute="top" secondItem="cAa-pw-xvv" secondAttribute="bottom" constant="5" id="l2e-7p-78y"/>
                     <constraint firstItem="6fS-ow-dEW" firstAttribute="centerX" secondItem="8yw-PC-w4a" secondAttribute="centerX" id="lAE-sO-Mwk"/>
-                    <constraint firstItem="Btj-QY-QgN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nME-D2-BKn"/>
                     <constraint firstItem="4cm-d2-hWd" firstAttribute="leading" secondItem="8yw-PC-w4a" secondAttribute="trailing" id="sLp-PA-maf"/>
                     <constraint firstItem="cAa-pw-xvv" firstAttribute="top" secondItem="8yw-PC-w4a" secondAttribute="top" constant="-10" id="zgi-nu-eYb"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="ErV-1f-lwq"/>
-                        <exclude reference="hiM-vJ-Uau"/>
-                        <exclude reference="l2e-7p-78y"/>
-                        <exclude reference="nME-D2-BKn"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>

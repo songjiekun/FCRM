@@ -12,6 +12,7 @@
 #import "ProductTableViewCell.h"
 #import "ClientMore.h"
 #import "ClientTableViewCell.h"
+#import "ClientListViewController.h"
 
 @interface ViewHelper : NSObject
 
@@ -36,5 +37,12 @@
  *@discussion 弹出照相界面
  */
 +(void)popoutCameraController:(UIViewController*)vc;
+
+/*!
+ *@discussion 弹出用户列表
+ */
++(ClientListViewController*)popoutClientListControllerToSelect:(UIViewController *)vc;
+    
+
 
 @end

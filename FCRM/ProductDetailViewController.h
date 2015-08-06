@@ -28,5 +28,9 @@
 @property (strong, nonatomic) NSOperationQueue *ioQueue;
 @property (strong, nonatomic) NSOperationQueue *internetQueue;
 
+/*!
+ *@discussion 显示推荐客户列表
+ */
+- (IBAction)recommendToClient:(id)sender;
 
 @end

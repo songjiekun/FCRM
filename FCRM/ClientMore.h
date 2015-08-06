@@ -9,6 +9,7 @@
 #import "Client.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "InternetImage.h"
+#import "ProductT.h"
 
 @interface ClientMore : Client
 
@@ -25,6 +26,9 @@
 
 //从客户端提交新的client
 +(void)submitClientWithClientName:(NSString*)clientName clientRisk:(NSNumber*)clientRisk clientIncome:(NSNumber*)clientIncome clientAge:(NSNumber*)clientAge   clientTel:(NSString*)clientTel profileImage:(UIImage *)profileImage context:(NSManagedObjectContext *)managedObjectContext withTarget:(id)target action:(SEL)submitSuccessfully;
+
+//从客户端为client推荐product
+-(void)recommendedWithProduct:(ProductT*)product withTarget:(id)target action:(SEL)recommendedSuccessfully;
 
 //从intrnet载入clients
 +(void)reloadClients:(id)target action:(SEL)reload byUser:(AVUser*)currentUser context:(NSManagedObjectContext *)managedObjectContext;
