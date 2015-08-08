@@ -49,6 +49,15 @@
                                     <action selector="goToClientList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="z7o-0w-aXu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-J9-abk">
+                                <rect key="frame" x="31" y="241" width="46" height="30"/>
+                                <state key="normal" title="task">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToTaskList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y3v-Nz-3Ll"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

@@ -13,6 +13,7 @@
 
 - (IBAction)goToClientList:(id)sender;
 
+- (IBAction)goToTaskList:(id)sender;
 
 @end
 

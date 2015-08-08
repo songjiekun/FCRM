@@ -55,23 +55,8 @@
  */
 -(void)submitSuccessfully{
     
-    //隐藏之前的hud
-    [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
-    
-    //显示成功信息
-    MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode=MBProgressHUDModeCustomView;
-    hud.labelText=@"添加成功";
-    hud.customView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"checkmark"]];
-    [hud hide:YES afterDelay:1];
-    //消失后 回退
-    hud.completionBlock=^{
-      
-        [self.navigationController popViewControllerAnimated:YES];
-        
-    };
-    
-    
+    [ViewHelper completeTask:self];
+     
 }
 
 

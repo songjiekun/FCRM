@@ -21,23 +21,32 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - AVOSCloud (3.1.2.9)
+  - DZNSegmentedControl (1.2.2)
   - IQKeyboardManager (3.2.4)
   - LeanCloudSocial (0.0.5):
     - AFNetworking (~> 2.0)
     - AVOSCloud (~> 3.1)
   - MBProgressHUD (0.9.1)
+  - SWTableViewCell (0.3.7)
+  - XLForm (3.0.1)
 
 DEPENDENCIES:
   - AVOSCloud (= 3.1.2.9)
+  - DZNSegmentedControl
   - IQKeyboardManager
   - LeanCloudSocial (= 0.0.5)
   - MBProgressHUD (~> 0.9.1)
+  - SWTableViewCell (~> 0.3.7)
+  - XLForm (~> 3.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AVOSCloud: 7d2406a4954c15c98363ce841b257b81cdba0bc9
+  DZNSegmentedControl: 8a7fdd743672742c692106f4456aaede10d43131
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   LeanCloudSocial: a142862a9d8968785186ba640e577adb323a5854
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
+  XLForm: 1a20da41c009e4f99e802e886a8eef5f2b086644
 
 COCOAPODS: 0.37.2

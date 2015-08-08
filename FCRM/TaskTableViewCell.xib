@@ -49,14 +49,22 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户姓名:王大妈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-7L-usd">
+                                <rect key="frame" x="117" y="34" width="81" height="11"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dxp-qi-DGX" firstAttribute="leading" secondItem="gqi-FB-DNF" secondAttribute="leading" id="2J9-CX-XNt"/>
+                            <constraint firstItem="baZ-7L-usd" firstAttribute="centerY" secondItem="QMT-Tc-R9K" secondAttribute="centerY" id="8qA-dg-ooe"/>
                             <constraint firstAttribute="trailing" secondItem="dxp-qi-DGX" secondAttribute="trailing" constant="3" id="HRe-o8-1pO"/>
                             <constraint firstItem="QMT-Tc-R9K" firstAttribute="top" secondItem="dxp-qi-DGX" secondAttribute="bottom" constant="5" id="Q7j-Qz-whF"/>
                             <constraint firstItem="gqi-FB-DNF" firstAttribute="top" secondItem="gSf-Y2-vHF" secondAttribute="top" constant="8" id="a1f-92-bOA"/>
                             <constraint firstItem="QMT-Tc-R9K" firstAttribute="leading" secondItem="gqi-FB-DNF" secondAttribute="leading" id="apv-mu-Qji"/>
+                            <constraint firstItem="baZ-7L-usd" firstAttribute="leading" secondItem="QMT-Tc-R9K" secondAttribute="trailing" constant="15" id="bJQ-We-OZ3"/>
                             <constraint firstItem="gqi-FB-DNF" firstAttribute="leading" secondItem="gSf-Y2-vHF" secondAttribute="leading" constant="20" id="dWT-e1-e3a"/>
                             <constraint firstItem="dxp-qi-DGX" firstAttribute="top" secondItem="gqi-FB-DNF" secondAttribute="bottom" constant="5" id="lwh-P4-bo0"/>
                             <constraint firstItem="gqi-FB-DNF" firstAttribute="top" secondItem="gSf-Y2-vHF" secondAttribute="top" constant="8" id="w8C-v2-oKo"/>
@@ -94,10 +102,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="backView" destination="q2l-Ae-rLU" id="ehO-wK-JE5"/>
-                <outlet property="clientNameLabel" destination="gqi-FB-DNF" id="igZ-0f-ztc"/>
-                <outlet property="clientProfileImageView" destination="xE6-nQ-uwe" id="nxY-eO-Wf8"/>
-                <outlet property="incomeLabel" destination="QMT-Tc-R9K" id="r5u-R6-7ph"/>
+                <outlet property="backView" destination="q2l-Ae-rLU" id="bbd-Lf-216"/>
+                <outlet property="clientNameLabel" destination="baZ-7L-usd" id="cK6-jO-hKd"/>
+                <outlet property="taskExpiryDateLabel" destination="QMT-Tc-R9K" id="3CF-W4-wLh"/>
+                <outlet property="taskLevelImageView" destination="xE6-nQ-uwe" id="ofs-sH-fQe"/>
+                <outlet property="taskNameLabel" destination="gqi-FB-DNF" id="Oir-7O-1vV"/>
             </connections>
             <point key="canvasLocation" x="276.5" y="238.5"/>
         </tableViewCell>

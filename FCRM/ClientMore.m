@@ -156,13 +156,13 @@
 }
 
 //从intrnet载入clients
-+(void)reloadClients:(id)target action:(SEL)reload byUser:(AVUser*)currentUser context:(NSManagedObjectContext *)managedObjectContext{
++(void)reloadClients:(id)target action:(SEL)reload  context:(NSManagedObjectContext *)managedObjectContext{
     
     AVQuery *query = [AVUser query];
 
     
     //筛选与排序
-    [query whereKey:@"advisor" equalTo:currentUser];
+    [query whereKey:@"advisor" equalTo:[AVUser currentUser]];
     
     [query orderByDescending:@"createdAt"];
 

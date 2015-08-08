@@ -7,7 +7,7 @@
 //
 
 #import "ViewHelper.h"
-
+#import "MBProgressHUD.h"
 
 
 @implementation ViewHelper
@@ -23,15 +23,13 @@
     
 }
 
-+(ClientListViewController*)popoutClientListControllerToSelect:(UIViewController *)vc{
++(ClientPickerViewController*)popoutClientPickerControllerToSelect:(UIViewController *)vc{
     
-    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"ClientList" bundle:nil];
+    ClientPickerViewController *clientPickerViewController=[[ClientPickerViewController alloc] initWithNibName:@"ClientPickerViewController" bundle:nil];
     
-    ClientListViewController *clientListViewController=[storyboard instantiateViewControllerWithIdentifier:@"ClientListViewController"];
+    [vc.navigationController pushViewController:clientPickerViewController animated:YES];
     
-    [vc.navigationController pushViewController:clientListViewController animated:YES];
-    
-    return clientListViewController;
+    return clientPickerViewController;
     
 }
 
@@ -61,6 +59,35 @@
             
         default:
             cell.levelImageView.image=[UIImage imageNamed:@"high"];
+            break;
+    }
+    
+}
+
++(void)configureTaskCell:(TaskTableViewCell *)cell task:(TaskMore *)task{
+    
+    //日期转换为string
+    NSDateFormatter *formatter =[[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM月dd日"];
+    NSString *taskExpiryDate=[formatter stringFromDate:task.taskExpiryDate];
+    
+    //更新Cell
+    cell.taskNameLabel.text=task.taskName;
+    cell.taskExpiryDateLabel.text=[NSString stringWithFormat:@"截止日期:%@",taskExpiryDate];
+    cell.clientNameLabel.text=[NSString stringWithFormat:@"客户姓名:%@",task.clientName];
+    
+    //不同level的task不同的提示颜色
+    switch ([task.taskLevel integerValue]) {
+        case 1:
+            cell.taskLevelImageView.image=[UIImage imageNamed:@"high"];
+            break;
+            
+        case 2:
+            cell.taskLevelImageView.image=[UIImage imageNamed:@"middle"];
+            break;
+            
+        default:
+            cell.taskLevelImageView.image=[UIImage imageNamed:@"high"];
             break;
     }
     
@@ -133,6 +160,31 @@
     cameraController.allowsEditing=YES;
     cameraController.delegate=vc;
     [vc presentViewController:cameraController animated:YES completion:nil];
+    
+}
+
++(void)completeTask:(UIViewController*)vc{
+    
+    //隐藏之前的hud
+    [MBProgressHUD hideAllHUDsForView:vc.view animated:NO];
+    
+    //显示成功信息
+    MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:vc.view animated:YES];
+    hud.mode=MBProgressHUDModeCustomView;
+    hud.labelText=@"任务创建成功";
+    hud.customView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"checkmark"]];
+    [hud hide:YES afterDelay:1];
+    //消失后 回退
+    hud.completionBlock=^{
+        
+        if (vc.navigationController) {
+            
+            [vc.navigationController popViewControllerAnimated:YES];
+        }
+        
+        
+    };
+    
     
 }
 

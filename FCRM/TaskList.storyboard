@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--任务管理-->
+        <scene sceneID="2Gb-cx-abJ">
+            <objects>
+                <viewController id="hJ0-9e-nBP" customClass="TaskListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ED-SW-3U1"/>
+                        <viewControllerLayoutGuide type="bottom" id="hDk-IK-iwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hPg-zk-GFV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Wkf-nU-9WE" customClass="DZNSegmentedControl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-LS-OJR">
+                                <rect key="frame" x="0.0" y="40" width="320" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hJ0-9e-nBP" id="mps-F6-5Lp"/>
+                                    <outlet property="delegate" destination="hJ0-9e-nBP" id="ilH-Pw-Mdk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kTW-LS-OJR" firstAttribute="top" secondItem="Wkf-nU-9WE" secondAttribute="bottom" id="1JO-Jt-Noy"/>
+                            <constraint firstItem="Wkf-nU-9WE" firstAttribute="leading" secondItem="hPg-zk-GFV" secondAttribute="leading" id="54b-NN-ZJB"/>
+                            <constraint firstItem="kTW-LS-OJR" firstAttribute="leading" secondItem="hPg-zk-GFV" secondAttribute="leading" id="7b8-w1-Gqd"/>
+                            <constraint firstAttribute="trailing" secondItem="Wkf-nU-9WE" secondAttribute="trailing" id="LBB-JX-ywZ"/>
+                            <constraint firstAttribute="trailing" secondItem="kTW-LS-OJR" secondAttribute="trailing" id="kQC-vw-DBg"/>
+                            <constraint firstItem="hDk-IK-iwd" firstAttribute="top" secondItem="kTW-LS-OJR" secondAttribute="bottom" id="qc4-eI-2hs"/>
+                            <constraint firstItem="Wkf-nU-9WE" firstAttribute="top" secondItem="1ED-SW-3U1" secondAttribute="bottom" id="tbt-vG-pyA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="任务管理" id="dGJ-1Y-kDM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uz9-Mn-6jI">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="TiF-mN-zP8" kind="push" id="jYd-hZ-z3u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Wkf-nU-9WE" id="vSj-Wn-2Tb"/>
+                        <outlet property="tableView" destination="kTW-LS-OJR" id="77t-VJ-qsi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxf-In-rmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="364"/>
+        </scene>
+        <!--创建新任务-->
+        <scene sceneID="mWu-eR-ciS">
+            <objects>
+                <viewController id="TiF-mN-zP8" customClass="CreateTaskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E0W-wp-Jec"/>
+                        <viewControllerLayoutGuide type="bottom" id="fJg-8L-sd9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UpJ-tZ-pmW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="创建新任务" id="fnD-wd-spJ">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="xZ6-7j-zLG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="submit:" destination="TiF-mN-zP8" id="5fA-am-QnU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vc5-GR-A3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="364"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F0r-s5-fAM">
+            <objects>
+                <navigationController storyboardIdentifier="TaskListNavigationController" id="Jxp-dp-a58" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Piv-r9-xCP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.91603787349999999" green="0.30360728149999999" blue="0.26852107279999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rfS-7q-qwp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="hJ0-9e-nBP" kind="relationship" relationship="rootViewController" id="KUf-78-iev"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzd-i7-Kgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="364"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

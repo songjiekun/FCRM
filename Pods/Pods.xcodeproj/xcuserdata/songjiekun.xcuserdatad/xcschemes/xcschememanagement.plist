@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FCRM-DZNSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FCRM-IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FCRM-SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FCRM-XLForm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FCRM.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>141D2E82E34B5E4F1514F378</key>
+		<key>15CC0CDEF21657C1C9C70422</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34F7673612A9DCA83A2F7BD1</key>
+		<key>69CD93F071A722A8B4A9FFD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43E361479DDF591CACB3A4DA</key>
+		<key>78EDBC6BB9444F7C5E84E9BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD8B63F7A4BBDF231FB1EEB0</key>
+		<key>9D734CF025192C9C81B2D8A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CFDB291B6B3C7A23C73BEB3E</key>
+		<key>A6120D02B8294EDDC69F6CBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC85892C9F5047086546418A</key>
+		<key>CF2ED4123212F0AEAC2D7893</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6C141C1B41261151BD988F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA67A9CDC0F9A66A319CEE46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA2CA8A6C357CD333A563C42</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -55,6 +55,12 @@
 // Please contact the author.
 // Version: 3.1.2.9.
 
+// DZNSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_DZNSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_DZNSegmentedControl 1
+#define COCOAPODS_VERSION_MINOR_DZNSegmentedControl 2
+#define COCOAPODS_VERSION_PATCH_DZNSegmentedControl 2
+
 // IQKeyboardManager
 #define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
 #define COCOAPODS_VERSION_MAJOR_IQKeyboardManager 3
@@ -72,4 +78,16 @@
 #define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0
 #define COCOAPODS_VERSION_MINOR_MBProgressHUD 9
 #define COCOAPODS_VERSION_PATCH_MBProgressHUD 1
+
+// SWTableViewCell
+#define COCOAPODS_POD_AVAILABLE_SWTableViewCell
+#define COCOAPODS_VERSION_MAJOR_SWTableViewCell 0
+#define COCOAPODS_VERSION_MINOR_SWTableViewCell 3
+#define COCOAPODS_VERSION_PATCH_SWTableViewCell 7
+
+// XLForm
+#define COCOAPODS_POD_AVAILABLE_XLForm
+#define COCOAPODS_VERSION_MAJOR_XLForm 3
+#define COCOAPODS_VERSION_MINOR_XLForm 0
+#define COCOAPODS_VERSION_PATCH_XLForm 1
 

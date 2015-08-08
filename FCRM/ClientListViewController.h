@@ -12,21 +12,12 @@
 #import "ProductT.h"
 #import "ClientMore.h"
 
-@interface ClientListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate,InternetImageDelegate,UISearchBarDelegate,UISearchDisplayDelegate,UIAlertViewDelegate>
+
+@interface ClientListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate,InternetImageDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-/*!
- *@discussion 设置clientlistcontroller是否为“选择模式”
- */
-@property (nonatomic) BOOL isSelectionMod;
-/*!
- *@discussion product数据
- */
-@property (nonatomic, strong) ProductT* product;
-/*!
- *@discussion 选中的client数据，用来在alertview中使用
- */
-@property (nonatomic, strong) ClientMore* selectedClient;
+
+
 //core data相关
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -39,5 +30,16 @@
 @property (strong, nonatomic) NSOperationQueue *internetQueue;
 
 
+
+//helper 方法
+/*!
+ *@discussion 根据tableview来选择fetchedResultsController
+ */
+- (NSFetchedResultsController *)fetchedResultsControllerForTableView:(UITableView *)tableView;
+
+/*!
+ *@discussion 根据fetchedResultsController来选择tableview
+ */
+- (UITableView *)tableViewForFetchedResultsController:(NSFetchedResultsController *)controller;
 
 @end

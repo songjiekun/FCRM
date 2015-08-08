@@ -21,48 +21,19 @@
     
     if((self=[super initWithCoder:aDecoder])){
         
-        //默认为非选择模式
-        self.isSelectionMod=NO;
+        [self initData];
         
-        //多线程,图片缓存 初始化
-        self.imageCache=[[NSCache alloc] init];
+    }
+    
+    return self;
+    
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    
+    if((self=[super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])){
         
-        self.ioQueue=[[NSOperationQueue alloc] init];
-        self.ioQueue.maxConcurrentOperationCount=40;
-        
-        self.internetQueue=[[NSOperationQueue alloc] init];
-        self.internetQueue.maxConcurrentOperationCount=10;
-        
-        ////初始化fetchedResultsController
-        //初始化 Fetch Request
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Client"];
-        
-        //排序
-        [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO]]];
-        
-        //初始化 Fetched Results Controller
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        self.managedObjectContext=app.managedObjectContext;
-        
-        //缓存client
-        self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"client"];
-        
-        //fetchedResultsController设置代理
-        self.fetchedResultsController.delegate=self;
-        
-        // Perform Fetch
-        NSError *error = nil;
-        [self.fetchedResultsController performFetch:&error];
-        
-        #warning 提示出错信息
-        if (error) {
-            NSLog(@"Unable to perform fetch.");
-            NSLog(@"%@, %@", error, error.localizedDescription);
-        }
-        
-        ////初始化searchFetchedResultsController
-        self.searchFetchedResultsController=nil;
-        self.searchFetchedResultsController.delegate=self;
+        [self initData];
         
     }
     
@@ -118,29 +89,6 @@
 }
 
 #pragma mark - target action回调方法
-/*!
- *@discussion submit成功 显示成功信息
- */
--(void)recommendedSuccessfully{
-    
-    //隐藏之前的hud
-    [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
-    
-    //显示成功信息
-    MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode=MBProgressHUDModeCustomView;
-    hud.labelText=@"添加成功";
-    hud.customView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"checkmark"]];
-    [hud hide:YES afterDelay:1];
-    //消失后 回退
-    hud.completionBlock=^{
-        
-        [self.navigationController popViewControllerAnimated:YES];
-        
-    };
-    
-    
-}
 /*!
  *@discussion 从互联网刷新列表 更新tableview
  */
@@ -352,63 +300,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    if (self.isSelectionMod) {
-        
-        //根据普通tableview 还是search tableview来获取fetchedResultsController
-        NSFetchedResultsController *frc= [self fetchedResultsControllerForTableView:tableView];
-        self.selectedClient = [frc objectAtIndexPath:indexPath];
-        
-        //选择client，给client推荐product
-        //ios 8下  使用UIAlertController
-        if ([UIAlertController class])
-        {
-            //使用UIAlertController
-            UIAlertController *actionSheet= [UIAlertController alertControllerWithTitle:@"推荐" message:[NSString stringWithFormat:@"推荐产品 %@ 给用户%@",self.product.productName,self.selectedClient.clientName] preferredStyle:UIAlertControllerStyleAlert];
-            
-            //确认按钮
-            UIAlertAction* yes = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                
-                //向服务器添加recommendation
-                [self.selectedClient recommendedWithProduct:self.product withTarget:self action:@selector(recommendedSuccessfully)];
-                
-                //显示 处理中提示
-                MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-                hud.labelText=@"服务器处理中";
-                
-            }];
-            
-            
-            //取消按钮
-            UIAlertAction* cancel= [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                
-                [actionSheet dismissViewControllerAnimated:YES completion:nil];
-                
-            }];
-            
-            //添加按钮
-            [actionSheet addAction:yes];
-            [actionSheet addAction:cancel];
-            
-            //弹出 UIAlertController
-            [self presentViewController:actionSheet animated:YES completion:nil];
-            
-        }
-        else
-        {
-            //<ios8
-            UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"推荐" message:[NSString stringWithFormat:@"推荐产品 %@ 给用户%@",self.product.productName,self.selectedClient.clientName] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定",@"取消",nil];
-            
-            [alertView show];
-              
-            
-        }
-        
-    }else{
-        
-        //查看用户详细页面
-        [self performSegueWithIdentifier:@"ClientDetailSegue" sender:tableView];
-        
-    }
+    //查看用户详细页面
+    [self performSegueWithIdentifier:@"ClientDetailSegue" sender:tableView];
     
 }
 
@@ -425,25 +318,7 @@
     
 }
 
-#pragma mark - alertview 代理
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
-    if (buttonIndex==0) {
-        
-        //向服务器添加recommendation
-        [self.selectedClient recommendedWithProduct:self.product withTarget:self action:@selector(recommendedSuccessfully)];
-        
-        //显示 处理中提示
-        MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.labelText=@"服务器处理中";
-        
-    }
-    if (buttonIndex==1) {
-        
-        [alertView dismissWithClickedButtonIndex:1 animated:YES];
-    }
-    
-}
+
 
 
 #pragma mark - prepareForSegue传递数据
@@ -536,7 +411,52 @@
     
 }
 
-
+-(void)initData{
+    
+    //默认为非选择模式
+    //self.isSelectionMod=NO;
+    
+    //多线程,图片缓存 初始化
+    self.imageCache=[[NSCache alloc] init];
+    
+    self.ioQueue=[[NSOperationQueue alloc] init];
+    self.ioQueue.maxConcurrentOperationCount=40;
+    
+    self.internetQueue=[[NSOperationQueue alloc] init];
+    self.internetQueue.maxConcurrentOperationCount=10;
+    
+    ////初始化fetchedResultsController
+    //初始化 Fetch Request
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Client"];
+    
+    //排序
+    [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO]]];
+    
+    //初始化 Fetched Results Controller
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext=app.managedObjectContext;
+    
+    //缓存client
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"client"];
+    
+    //fetchedResultsController设置代理
+    self.fetchedResultsController.delegate=self;
+    
+    // Perform Fetch
+    NSError *error = nil;
+    [self.fetchedResultsController performFetch:&error];
+    
+#warning 提示出错信息
+    if (error) {
+        NSLog(@"Unable to perform fetch.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+    }
+    
+    ////初始化searchFetchedResultsController
+    self.searchFetchedResultsController=nil;
+    self.searchFetchedResultsController.delegate=self;
+    
+}
 
 
 @end

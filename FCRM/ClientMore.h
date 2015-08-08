@@ -31,7 +31,7 @@
 -(void)recommendedWithProduct:(ProductT*)product withTarget:(id)target action:(SEL)recommendedSuccessfully;
 
 //从intrnet载入clients
-+(void)reloadClients:(id)target action:(SEL)reload byUser:(AVUser*)currentUser context:(NSManagedObjectContext *)managedObjectContext;
++(void)reloadClients:(id)target action:(SEL)reload context:(NSManagedObjectContext *)managedObjectContext;
 
 
 @end

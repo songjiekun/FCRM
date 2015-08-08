@@ -8,7 +8,7 @@
 
 #import "ProductDetailViewController.h"
 #import "ViewHelper.h"
-#import "ClientListViewController.h"
+#import "ClientPickerViewController.h"
 
 @interface ProductDetailViewController ()
 
@@ -122,8 +122,8 @@
 #pragma mark - click action 方法
 - (IBAction)recommendToClient:(id)sender{
     
-    ClientListViewController *clientListvc=[ViewHelper popoutClientListControllerToSelect:self];
-    clientListvc.isSelectionMod=YES;
+    ClientPickerViewController *clientListvc=[ViewHelper popoutClientPickerControllerToSelect:self];
+    clientListvc.isXLForm=NO;
     clientListvc.product=self.product;
     
 }

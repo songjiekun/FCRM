@@ -12,7 +12,9 @@
 #import "ProductTableViewCell.h"
 #import "ClientMore.h"
 #import "ClientTableViewCell.h"
-#import "ClientListViewController.h"
+#import "ClientPickerViewController.h"
+#import "TaskTableViewCell.h"
+#import "TaskMore.h"
 
 @interface ViewHelper : NSObject
 
@@ -22,6 +24,11 @@
  *@discussion 填充product tableviewcell
  */
 +(void)configureProductCell:(ProductTableViewCell *)cell product:(ProductT *)product;
+
+/*!
+ *@discussion 填充task tableviewcell
+ */
++(void)configureTaskCell:(TaskTableViewCell *)cell task:(TaskMore *)task;
 
 /*!
  *@discussion 填充client tableviewcell
@@ -39,10 +46,13 @@
 +(void)popoutCameraController:(UIViewController*)vc;
 
 /*!
- *@discussion 弹出用户列表
+ *@discussion 弹出用户选择列表
  */
-+(ClientListViewController*)popoutClientListControllerToSelect:(UIViewController *)vc;
-    
++(ClientPickerViewController*)popoutClientPickerControllerToSelect:(UIViewController *)vc;
 
+/*!
+ *@discussion 任务完成后回退
+ */
++(void)completeTask:(UIViewController*)vc;
 
 @end

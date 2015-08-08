@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SWTableViewCell.h>
 
-@interface TaskTableViewCell : UITableViewCell
+@interface TaskTableViewCell : SWTableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *clientNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *taskNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *taskExpiryDateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *taskLevelImageView;
+@property (weak, nonatomic) IBOutlet UIView *backView;
 
 @end

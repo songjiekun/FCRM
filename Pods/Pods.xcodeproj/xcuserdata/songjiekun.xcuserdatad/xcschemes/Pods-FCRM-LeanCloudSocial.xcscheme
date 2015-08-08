@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "141D2E82E34B5E4F1514F378"
+               BlueprintIdentifier = "EA67A9CDC0F9A66A319CEE46"
                BuildableName = "libPods-FCRM-LeanCloudSocial.a"
                BlueprintName = "Pods-FCRM-LeanCloudSocial"
                ReferencedContainer = "container:Pods.xcodeproj">
