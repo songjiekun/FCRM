@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClientPickerViewController">
             <connections>
-                <outlet property="searchBarLayoutConstraint" destination="haj-Lm-BbV" id="zTt-0l-Vc3"/>
                 <outlet property="searchDisplayController" destination="WJl-ye-Zrz" id="dMF-XZ-7EW"/>
                 <outlet property="tableView" destination="uJW-6J-40l" id="wBh-ln-uOK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

@@ -10,6 +10,7 @@
 #import "ClientTableViewCell.h"
 #import "ViewHelper.h"
 #import "MBProgressHUD.h"
+#import "ControlVariables.h"
 
 @interface ClientListViewController ()
 
@@ -79,6 +80,9 @@
     
     //背景设置成淡灰色
     self.searchDisplayController.searchResultsTableView.backgroundColor=[UIColor groupTableViewBackgroundColor];
+    //self.searchDisplayController.searchBar.barStyle=UISearchBarStyleMinimal;
+    //searchbar背景颜色
+    self.searchDisplayController.searchBar.barTintColor=kMainColor;
     
 }
 
@@ -189,6 +193,22 @@
 
 
 #pragma mark UISearchDisplayController 代理
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
+    
+    //[self.searchDisplayController.searchBar setBackgroundImage:kMainColor forBarPosition:0 barMetrics:UIBarMetricsDefault];
+    //self.searchDisplayController.searchBar.barTintColor=kMainColor;
+    //self.searchDisplayController.searchBar.translucent=NO;
+    
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller{
+    
+    
+    //self.searchDisplayController.searchBar.barTintColor=[UIColor grayColor];
+    //self.searchDisplayController.searchBar.translucent=YES;
+    //self.searchDisplayController.searchBar.backgroundColor=kMainColor;
+}
+
 - (void)searchDisplayController:(UISearchDisplayController *)controller willUnloadSearchResultsTableView:(UITableView *)tableView;
 {
     // search is done so get rid of the search FRC and reclaim memory

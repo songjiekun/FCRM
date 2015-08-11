@@ -158,7 +158,7 @@ NSString *const kTaskStatus = @"status";
  */
 -(void)submitSuccessfully{
     
-    [ViewHelper completeTask:self];
+    [ViewHelper completeLoading:self withText:@"创建成功"];
     
 }
 

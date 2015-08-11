@@ -11,8 +11,9 @@
 #import <DZNSegmentedControl.h>
 #import "AppDelegate.h"
 #import "TaskMore.h"
+#import "TaskTableViewCell.h"
 
-@interface TaskListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate>
+@interface TaskListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate,SWTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet DZNSegmentedControl *segmentedControl;

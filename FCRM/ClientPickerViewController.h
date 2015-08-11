@@ -12,8 +12,6 @@
 
 @interface ClientPickerViewController :  ClientListViewController<UIAlertViewDelegate,XLFormRowDescriptorViewController>
 
-@property (weak,nonatomic) IBOutlet NSLayoutConstraint *searchBarLayoutConstraint;
-
 /*!
  *@discussion 设置是否为“XLForm模式”
  */

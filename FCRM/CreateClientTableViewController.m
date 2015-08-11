@@ -55,7 +55,7 @@
  */
 -(void)submitSuccessfully{
     
-    [ViewHelper completeTask:self];
+    [ViewHelper completeLoading:self withText:@"保存成功"];
      
 }
 

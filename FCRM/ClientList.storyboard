@@ -45,7 +45,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="q2C-Fu-Ymg">
                                 <rect key="frame" x="0.0" y="44" width="320" height="460"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6mL-DN-Qsx" id="71I-5d-Taz"/>
                                     <outlet property="delegate" destination="6mL-DN-Qsx" id="bdS-Pa-KOO"/>

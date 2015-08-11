@@ -8,6 +8,7 @@
 
 #import "ViewHelper.h"
 #import "MBProgressHUD.h"
+#import "ControlVariables.h"
 
 
 @implementation ViewHelper
@@ -79,15 +80,18 @@
     //不同level的task不同的提示颜色
     switch ([task.taskLevel integerValue]) {
         case 1:
-            cell.taskLevelImageView.image=[UIImage imageNamed:@"high"];
+            cell.taskLevelImageView.image=[UIImage imageNamed:@"low"];
+            cell.taskLevelImageView.backgroundColor=kLowColor;
             break;
             
         case 2:
-            cell.taskLevelImageView.image=[UIImage imageNamed:@"middle"];
+            cell.taskLevelImageView.image=[UIImage imageNamed:@"high"];
+            cell.taskLevelImageView.backgroundColor=kHighColor;
             break;
             
         default:
             cell.taskLevelImageView.image=[UIImage imageNamed:@"high"];
+            cell.taskLevelImageView.backgroundColor=kHighColor;
             break;
     }
     
@@ -163,7 +167,7 @@
     
 }
 
-+(void)completeTask:(UIViewController*)vc{
++(void)completeLoading:(UIViewController*)vc withText:(NSString*)text{
     
     //隐藏之前的hud
     [MBProgressHUD hideAllHUDsForView:vc.view animated:NO];
@@ -171,7 +175,7 @@
     //显示成功信息
     MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:vc.view animated:YES];
     hud.mode=MBProgressHUDModeCustomView;
-    hud.labelText=@"任务创建成功";
+    hud.labelText=text;
     hud.customView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"checkmark"]];
     [hud hide:YES afterDelay:1];
     //消失后 回退

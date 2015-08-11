@@ -53,6 +53,6 @@
 /*!
  *@discussion 任务完成后回退
  */
-+(void)completeTask:(UIViewController*)vc;
++(void)completeLoading:(UIViewController*)vc withText:(NSString*)text;
 
 @end

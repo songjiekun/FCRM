@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,11 +17,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2l-Ae-rLU">
-                        <rect key="frame" x="5" y="5" width="359" height="55"/>
+                        <rect key="frame" x="5" y="0.0" width="359" height="65"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xE6-nQ-uwe">
-                        <rect key="frame" x="5" y="5" width="14" height="55"/>
+                        <rect key="frame" x="5" y="0.0" width="16" height="64"/>
                         <color key="backgroundColor" red="0.87058823529411766" green="0.20392156862745098" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="999" constant="65" id="SKX-em-O7W"/>
@@ -28,31 +29,31 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-Y2-vHF">
-                        <rect key="frame" x="19" y="5" width="345" height="55"/>
+                        <rect key="frame" x="21" y="0.0" width="343" height="65"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系王大妈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqi-FB-DNF">
-                                <rect key="frame" x="20" y="8" width="75" height="15"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                <rect key="frame" x="20" y="8" width="80" height="16"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxp-qi-DGX">
-                                <rect key="frame" x="20" y="28" width="322" height="1"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxp-qi-DGX">
+                                <rect key="frame" x="20" y="28" width="172" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="nng-B1-sGP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="截止日期:3月5日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMT-Tc-R9K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="截止日期:3月5日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMT-Tc-R9K">
                                 <rect key="frame" x="20" y="34" width="82" height="11"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户姓名:王大妈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-7L-usd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="客户姓名:王大妈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-7L-usd">
                                 <rect key="frame" x="117" y="34" width="81" height="11"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -60,23 +61,25 @@
                         <constraints>
                             <constraint firstItem="dxp-qi-DGX" firstAttribute="leading" secondItem="gqi-FB-DNF" secondAttribute="leading" id="2J9-CX-XNt"/>
                             <constraint firstItem="baZ-7L-usd" firstAttribute="centerY" secondItem="QMT-Tc-R9K" secondAttribute="centerY" id="8qA-dg-ooe"/>
-                            <constraint firstAttribute="trailing" secondItem="dxp-qi-DGX" secondAttribute="trailing" constant="3" id="HRe-o8-1pO"/>
+                            <constraint firstAttribute="trailing" secondItem="dxp-qi-DGX" secondAttribute="trailing" constant="150" id="HRe-o8-1pO"/>
                             <constraint firstItem="QMT-Tc-R9K" firstAttribute="top" secondItem="dxp-qi-DGX" secondAttribute="bottom" constant="5" id="Q7j-Qz-whF"/>
                             <constraint firstItem="gqi-FB-DNF" firstAttribute="top" secondItem="gSf-Y2-vHF" secondAttribute="top" constant="8" id="a1f-92-bOA"/>
                             <constraint firstItem="QMT-Tc-R9K" firstAttribute="leading" secondItem="gqi-FB-DNF" secondAttribute="leading" id="apv-mu-Qji"/>
                             <constraint firstItem="baZ-7L-usd" firstAttribute="leading" secondItem="QMT-Tc-R9K" secondAttribute="trailing" constant="15" id="bJQ-We-OZ3"/>
                             <constraint firstItem="gqi-FB-DNF" firstAttribute="leading" secondItem="gSf-Y2-vHF" secondAttribute="leading" constant="20" id="dWT-e1-e3a"/>
+                            <constraint firstItem="dxp-qi-DGX" firstAttribute="width" secondItem="gSf-Y2-vHF" secondAttribute="width" multiplier="1:2" id="enI-ju-dWB"/>
                             <constraint firstItem="dxp-qi-DGX" firstAttribute="top" secondItem="gqi-FB-DNF" secondAttribute="bottom" constant="5" id="lwh-P4-bo0"/>
                             <constraint firstItem="gqi-FB-DNF" firstAttribute="top" secondItem="gSf-Y2-vHF" secondAttribute="top" constant="8" id="w8C-v2-oKo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="w8C-v2-oKo"/>
+                                <exclude reference="HRe-o8-1pO"/>
                             </mask>
                         </variation>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onO-eX-dOu">
-                        <rect key="frame" x="8" y="59" width="353" height="1"/>
+                        <rect key="frame" x="8" y="64" width="353" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="13D-1i-lvl"/>
@@ -88,15 +91,15 @@
                     <constraint firstItem="onO-eX-dOu" firstAttribute="bottom" secondItem="q2l-Ae-rLU" secondAttribute="bottom" id="14r-pK-Ipe"/>
                     <constraint firstItem="q2l-Ae-rLU" firstAttribute="trailing" secondItem="gSf-Y2-vHF" secondAttribute="trailing" id="8b8-kE-6Kb"/>
                     <constraint firstItem="q2l-Ae-rLU" firstAttribute="bottom" secondItem="gSf-Y2-vHF" secondAttribute="bottom" id="9BG-0z-4jP"/>
-                    <constraint firstAttribute="bottom" secondItem="q2l-Ae-rLU" secondAttribute="bottom" constant="5" id="DIt-S7-J1o"/>
+                    <constraint firstAttribute="bottom" secondItem="q2l-Ae-rLU" secondAttribute="bottom" id="DIt-S7-J1o"/>
                     <constraint firstItem="q2l-Ae-rLU" firstAttribute="leading" secondItem="xE6-nQ-uwe" secondAttribute="leading" id="IOR-g7-71S"/>
                     <constraint firstItem="gSf-Y2-vHF" firstAttribute="leading" secondItem="xE6-nQ-uwe" secondAttribute="trailing" id="Mfv-sz-haO"/>
+                    <constraint firstItem="onO-eX-dOu" firstAttribute="top" secondItem="xE6-nQ-uwe" secondAttribute="bottom" id="byW-kX-HzL"/>
                     <constraint firstItem="onO-eX-dOu" firstAttribute="leading" secondItem="q2l-Ae-rLU" secondAttribute="leading" constant="3" id="fwn-iT-TLj"/>
                     <constraint firstItem="q2l-Ae-rLU" firstAttribute="top" secondItem="xE6-nQ-uwe" secondAttribute="top" id="lyH-YD-4oT"/>
                     <constraint firstItem="onO-eX-dOu" firstAttribute="trailing" secondItem="q2l-Ae-rLU" secondAttribute="trailing" constant="-3" id="oGO-lf-juP"/>
                     <constraint firstItem="q2l-Ae-rLU" firstAttribute="leading" secondItem="gW9-fA-dJe" secondAttribute="leading" constant="5" id="oLf-aO-tzV"/>
-                    <constraint firstItem="q2l-Ae-rLU" firstAttribute="top" secondItem="gW9-fA-dJe" secondAttribute="top" constant="5" id="tQf-jk-Poy"/>
-                    <constraint firstItem="q2l-Ae-rLU" firstAttribute="bottom" secondItem="xE6-nQ-uwe" secondAttribute="bottom" id="uTe-lx-Bdd"/>
+                    <constraint firstItem="q2l-Ae-rLU" firstAttribute="top" secondItem="gW9-fA-dJe" secondAttribute="top" id="tQf-jk-Poy"/>
                     <constraint firstItem="q2l-Ae-rLU" firstAttribute="top" secondItem="gSf-Y2-vHF" secondAttribute="top" id="wAu-nD-gT0"/>
                 </constraints>
             </tableViewCellContentView>

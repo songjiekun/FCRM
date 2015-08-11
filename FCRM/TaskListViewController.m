@@ -8,7 +8,6 @@
 
 #import "TaskListViewController.h"
 #import "MBProgressHUD.h"
-#import "TaskTableViewCell.h"
 #import "ViewHelper.h"
 #import "DataHelper.h"
 #import "ControlVariables.h"
@@ -96,6 +95,24 @@
     [self configureSegmentedcontrolCounts];
     
     
+    
+}
+
+#pragma mark - target action回调方法
+/*!
+ *@discussion deleted成功 显示成功信息
+ */
+-(void)deletedSuccessfully{
+    
+    [ViewHelper completeLoading:self withText:@"任务被删除"];
+    
+}
+/*!
+ *@discussion completed成功 显示成功信息
+ */
+-(void)completedSuccessfully{
+    
+    [ViewHelper completeLoading:self withText:@"任务完成"];
     
 }
 
@@ -200,6 +217,7 @@
     
     TaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskTableViewCell" forIndexPath:indexPath];
     
+    cell.delegate=self;
     TaskMore *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     [ViewHelper configureTaskCell:cell task:task];
@@ -226,6 +244,53 @@
         return 65+20+10;//图片大小65x65 上下空挡各10;
     }
     
+}
+
+#pragma mark - SWTableView代理
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+        {
+            // 按下完成按钮
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            
+            TaskMore *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            
+            //完成task
+            [task completedWithTarget:self action:@selector(completedSuccessfully) context:self.managedObjectContext];
+            
+            //显示 处理中提示
+            MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText=@"服务器处理中";
+            
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+        {
+            // 按下删除按钮
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            
+            TaskMore *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            
+            //删除task
+            [task deletedWithTarget:self action:@selector(deletedSuccessfully) context:self.managedObjectContext];
+            
+            //显示 处理中提示
+            MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText=@"服务器处理中";
+            
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 

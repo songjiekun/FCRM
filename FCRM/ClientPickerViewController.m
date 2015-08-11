@@ -21,6 +21,7 @@
     
     if((self=[super initWithCoder:aDecoder])){
         
+        //默认值，默认情况认为是从XLForm过来的
         self.isXLForm=YES;
         
     }
@@ -33,6 +34,7 @@
     
     if((self=[super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])){
         
+        //默认值，默认情况认为是从XLForm过来的
         self.isXLForm=YES;
         
     }
@@ -45,6 +47,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,14 +56,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillLayoutSubviews{
-    
-    [super viewWillLayoutSubviews];
-    
-    //对齐上线
-    self.searchBarLayoutConstraint.constant=[self.topLayoutGuide length];
-    
-}
 
 #pragma mark - target action回调方法
 /*!
@@ -67,7 +63,7 @@
  */
 -(void)recommendedSuccessfully{
     
-    [ViewHelper completeTask:self];
+    [ViewHelper completeLoading:self withText:@"推荐成功"];
     
     
 }

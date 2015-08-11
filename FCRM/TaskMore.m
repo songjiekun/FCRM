@@ -116,6 +116,86 @@
     
 }
 
+-(void)deletedWithTarget:(id)target action:(SEL)deletedSuccessfully context:(NSManagedObjectContext *)managedObjectContext{
+    
+    //设置task
+    AVObject *taskObject =[AVObject objectWithoutDataWithClassName:@"Task" objectId:self.oID];
+    
+    __weak TaskMore *wSelf=self;
+    
+    //存入cloudlean服务器
+    [taskObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (succeeded) {
+            
+            //从coredata删除
+            [managedObjectContext deleteObject:wSelf];
+            
+            //调用save后 会强行调用fetchedResultsController的delegate
+            if (![managedObjectContext save:&error]) {
+                NSLog(@"Unable to save managed object context.");
+                NSLog(@"%@, %@", error, error.localizedDescription);
+            }
+            else{
+                
+                //回到发送界面，显示发送成功信息
+                [target performSelector:deletedSuccessfully];
+                
+            }
+            
+            
+            
+        }
+        else{
+#warning 提示出错信息
+            NSLog(@"%@",error);
+        }
+        
+    }];
+
+    
+}
+
+-(void)completedWithTarget:(id)target action:(SEL)completedSuccessfully context:(NSManagedObjectContext *)managedObjectContext{
+    
+    //设置task
+    AVObject *taskObject =[AVObject objectWithoutDataWithClassName:@"Task" objectId:self.oID];
+    [taskObject setObject:@(2) forKey:@"taskStatus"];
+    
+    __weak TaskMore *wSelf=self;
+    
+    //存入cloudlean服务器
+    [taskObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (succeeded) {
+            
+            //从coredata中更新
+            wSelf.taskStatus=@(2);
+            
+            //调用save后 会强行调用fetchedResultsController的delegate
+            if (![managedObjectContext save:&error]) {
+                NSLog(@"Unable to save managed object context.");
+                NSLog(@"%@, %@", error, error.localizedDescription);
+            }
+            else{
+                
+                //回到发送界面，显示发送成功信息
+                [target performSelector:completedSuccessfully];
+                
+            }
+            
+            
+            
+        }
+        else{
+#warning 提示出错信息
+            NSLog(@"%@",error);
+        }
+        
+    }];
+
+    
+}
 
 
 +(void)reloadTasks:(id)target action:(SEL)reload context:(NSManagedObjectContext *)managedObjectContext{

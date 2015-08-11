@@ -22,6 +22,12 @@
 //从客户端提交新的task
 +(void)submitTaskWithTaskName:(NSString*)taskName taskDetail:(NSString*)taskDetail taskLevel:(NSNumber*)taskLevel taskStatus:(NSNumber*)taskStatus taskExpiryDate:(NSDate*)taskExpiryDate  client:(ClientMore*)client context:(NSManagedObjectContext *)managedObjectContext withTarget:(id)target action:(SEL)submitSuccessfully;
 
+//从客户端删除task
+-(void)deletedWithTarget:(id)target action:(SEL)deletedSuccessfully context:(NSManagedObjectContext *)managedObjectContext;
+
+//从客户端完成task
+-(void)completedWithTarget:(id)target action:(SEL)completedSuccessfully context:(NSManagedObjectContext *)managedObjectContext;
+
 
 //从intrnet载入tasks
 +(void)reloadTasks:(id)target action:(SEL)reload context:(NSManagedObjectContext *)managedObjectContext;
