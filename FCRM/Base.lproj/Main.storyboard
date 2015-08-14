@@ -1,126 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KYn-xQ-uSF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Tab Bar Controller-->
+        <scene sceneID="dVb-j9-xYV">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZm-4u-oir">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="5KU-YD-rb9"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem image="Image" id="xXG-OU-Jcg"/>
-                                    <tabBarItem title="Item" image="Image-1" id="fM5-mq-kSY"/>
-                                    <tabBarItem title="Item" image="Image-2" id="eT1-Xk-470"/>
-                                    <tabBarItem title="Item" image="Image-3" id="nyr-aD-GUp"/>
-                                    <tabBarItem systemItem="more" id="7bG-QS-uve"/>
-                                </items>
-                            </tabBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-k8-C3q">
-                                <rect key="frame" x="144" y="373" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToProductList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fGS-iD-GtG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-5H-qFa">
-                                <rect key="frame" x="31" y="312" width="46" height="30"/>
-                                <state key="normal" title="client">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToClientList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="z7o-0w-aXu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-J9-abk">
-                                <rect key="frame" x="31" y="241" width="46" height="30"/>
-                                <state key="normal" title="task">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToTaskList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y3v-Nz-3Ll"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="KZm-4u-oir" secondAttribute="trailing" id="D61-Hf-7bi"/>
-                            <constraint firstItem="KZm-4u-oir" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="K9B-mo-rY7"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KZm-4u-oir" secondAttribute="bottom" id="PIw-oX-HSa"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="301.33333333333331" y="452.50666666666666"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="fqe-NS-D9Q">
-            <objects>
-                <tableViewController id="1nX-bB-rQI" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aCK-yk-dC0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nZc-SQ-Q1w">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nZc-SQ-Q1w" id="pXn-Aw-4SV">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1nX-bB-rQI" id="DTl-UZ-RU3"/>
-                            <outlet property="delegate" destination="1nX-bB-rQI" id="X2q-wu-jjK"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="QZf-Ty-md8"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pyd-Kb-ARk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1232" y="208"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="t9x-9V-yTD">
-            <objects>
-                <navigationController id="HzL-Sg-olZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RpI-yY-CpS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <tabBarController id="KYn-xQ-uSF" customClass="FCRMUITabBarController" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Pc6-O5-d9y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="1nX-bB-rQI" kind="relationship" relationship="rootViewController" id="hzC-B9-6wN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="58O-Ey-CU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-9I-zcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="208"/>
+            <point key="canvasLocation" x="653" y="219"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Image" width="25" height="25"/>
-        <image name="Image-1" width="25" height="25"/>
-        <image name="Image-2" width="25" height="25"/>
-        <image name="Image-3" width="25" height="25"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

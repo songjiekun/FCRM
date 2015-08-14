@@ -11,7 +11,6 @@
 		801A48071B5F9EEE006D537B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A48061B5F9EEE006D537B /* main.m */; };
 		801A480A1B5F9EEE006D537B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A48091B5F9EEE006D537B /* AppDelegate.m */; };
 		801A480D1B5F9EEE006D537B /* FCRM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 801A480B1B5F9EEE006D537B /* FCRM.xcdatamodeld */; };
-		801A48101B5F9EEE006D537B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A480F1B5F9EEE006D537B /* ViewController.m */; };
 		801A48131B5F9EEE006D537B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801A48111B5F9EEE006D537B /* Main.storyboard */; };
 		801A48151B5F9EEE006D537B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A48141B5F9EEE006D537B /* Images.xcassets */; };
 		801A48181B5F9EEE006D537B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801A48161B5F9EEE006D537B /* LaunchScreen.xib */; };
@@ -65,6 +64,8 @@
 		80B3CB8B1B7597DA0007B03E /* ClientPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B3CB891B7597DA0007B03E /* ClientPickerViewController.xib */; };
 		80DC79CC1B6F1447009015DC /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DC79CA1B6F1447009015DC /* qq.png */; };
 		80DC79CD1B6F1447009015DC /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DC79CB1B6F1447009015DC /* wechat.png */; };
+		80FE9AB31B7DCFF800EF55F0 /* FCRMUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FE9AB21B7DCFF800EF55F0 /* FCRMUITabBarController.m */; };
+		80FE9AB51B7DE01700EF55F0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FE9AB41B7DE01700EF55F0 /* icon.png */; };
 		80FF81711B7371C200044DEF /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FF816F1B7371C200044DEF /* TaskTableViewCell.m */; };
 		80FF81721B7371C200044DEF /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FF81701B7371C200044DEF /* TaskTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -89,8 +90,6 @@
 		801A48081B5F9EEE006D537B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		801A48091B5F9EEE006D537B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		801A480C1B5F9EEE006D537B /* FCRM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FCRM.xcdatamodel; sourceTree = "<group>"; };
-		801A480E1B5F9EEE006D537B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		801A480F1B5F9EEE006D537B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		801A48121B5F9EEE006D537B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		801A48141B5F9EEE006D537B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		801A48171B5F9EEE006D537B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -169,6 +168,9 @@
 		80B3CB8F1B75DF350007B03E /* ControlVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlVariables.h; sourceTree = "<group>"; };
 		80DC79CA1B6F1447009015DC /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
 		80DC79CB1B6F1447009015DC /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
+		80FE9AB11B7DCFF800EF55F0 /* FCRMUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRMUITabBarController.h; sourceTree = "<group>"; };
+		80FE9AB21B7DCFF800EF55F0 /* FCRMUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRMUITabBarController.m; sourceTree = "<group>"; };
+		80FE9AB41B7DE01700EF55F0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		80FF816E1B7371C200044DEF /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		80FF816F1B7371C200044DEF /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		80FF81701B7371C200044DEF /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
@@ -244,8 +246,8 @@
 				808E65031B68A7B100314238 /* Image Resource */,
 				801A48081B5F9EEE006D537B /* AppDelegate.h */,
 				801A48091B5F9EEE006D537B /* AppDelegate.m */,
-				801A480E1B5F9EEE006D537B /* ViewController.h */,
-				801A480F1B5F9EEE006D537B /* ViewController.m */,
+				80FE9AB11B7DCFF800EF55F0 /* FCRMUITabBarController.h */,
+				80FE9AB21B7DCFF800EF55F0 /* FCRMUITabBarController.m */,
 				801A48111B5F9EEE006D537B /* Main.storyboard */,
 				801A48141B5F9EEE006D537B /* Images.xcassets */,
 				801A48161B5F9EEE006D537B /* LaunchScreen.xib */,
@@ -348,6 +350,7 @@
 		808E65031B68A7B100314238 /* Image Resource */ = {
 			isa = PBXGroup;
 			children = (
+				80FE9AB41B7DE01700EF55F0 /* icon.png */,
 				806342AB1B71F18000F7A64E /* checkmark@2x.png */,
 				80DC79CA1B6F1447009015DC /* qq.png */,
 				80DC79CB1B6F1447009015DC /* wechat.png */,
@@ -570,6 +573,7 @@
 				8028D5C81B69D98C0054D0EF /* high@2x.png in Resources */,
 				808E651D1B68BCC700314238 /* low.png in Resources */,
 				80DC79CD1B6F1447009015DC /* wechat.png in Resources */,
+				80FE9AB51B7DE01700EF55F0 /* icon.png in Resources */,
 				8028D5BF1B69D4BC0054D0EF /* duichongicon.png in Resources */,
 				80A3217C1B6E049400FFCD9B /* money-bag-icon.png in Resources */,
 				806342AC1B71F18000F7A64E /* checkmark@2x.png in Resources */,
@@ -648,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				801A480A1B5F9EEE006D537B /* AppDelegate.m in Sources */,
+				80FE9AB31B7DCFF800EF55F0 /* FCRMUITabBarController.m in Sources */,
 				809C20321B74D4B700EAC7F6 /* CreateTaskViewController.m in Sources */,
 				80AFB5451B6B7985000A7A13 /* ProductDetailViewController.m in Sources */,
 				802834E81B70E60400CEC4BA /* CreateClientTableViewController.m in Sources */,
@@ -655,7 +660,6 @@
 				801A48071B5F9EEE006D537B /* main.m in Sources */,
 				809C202F1B74C84300EAC7F6 /* DataHelper.m in Sources */,
 				802834E21B70A47900CEC4BA /* ClientMore.m in Sources */,
-				801A48101B5F9EEE006D537B /* ViewController.m in Sources */,
 				80A321771B6DF83900FFCD9B /* LoginViewController.m in Sources */,
 				8028D5E01B6A200C0054D0EF /* SimpleFilterPicker.m in Sources */,
 				808E65171B68BADD00314238 /* ProductTableViewCell.m in Sources */,

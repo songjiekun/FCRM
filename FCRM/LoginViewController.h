@@ -32,4 +32,9 @@
  */
 - (IBAction)wechatLogin:(id)sender;
 
+/*!
+ *@discussion 取消按钮
+ */
+- (IBAction)cancel:(id)sender;
+
 @end

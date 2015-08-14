@@ -138,7 +138,14 @@
                             <constraint firstItem="qn5-ME-12Z" firstAttribute="top" secondItem="7Oi-NF-ksR" secondAttribute="bottom" constant="20" id="zcZ-1U-vaq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="用户登录" id="RCK-cQ-fVf"/>
+                    <navigationItem key="navigationItem" title="用户登录" id="RCK-cQ-fVf">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="L93-bZ-ZeJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="qdU-LZ-jQI" id="Wu4-oM-ZIL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="passwordTextField" destination="7hB-E7-BDI" id="KoX-Ss-n2a"/>
                         <outlet property="qqLoginButton" destination="KLW-92-Jln" id="vtY-e6-jst"/>

@@ -53,6 +53,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>理财王</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
