@@ -41,6 +41,13 @@
 			</array>
 		</dict>
 	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>sinaweibohdsso</string>
+        <string>sinaweibosso</string>
+        <string>weixin</string>
+        <string>mqqOpensdkSSoLogin</string>
+    </array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

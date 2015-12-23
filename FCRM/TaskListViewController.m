@@ -229,7 +229,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     //查看Task详细页面
-    [self performSegueWithIdentifier:@"TaskDetailSegue" sender:tableView];
+    //[self performSegueWithIdentifier:@"TaskDetailSegue" sender:tableView];
     
 }
 

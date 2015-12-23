@@ -151,7 +151,7 @@
                     UIImage *internetImage=[UIImage imageWithData:data];
                     
                     //保存图片到磁盘
-                    [data writeToFile:filePath atomically:YES];
+                    BOOL booool=[data writeToFile:filePath atomically:YES];
                     
                     //图片放到内存缓存中
                     [cache setObject:internetImage forKey:wSelf.imageUrl];

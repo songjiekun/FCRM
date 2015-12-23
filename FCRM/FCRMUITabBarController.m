@@ -49,6 +49,9 @@
     [[UITabBarItem alloc] initWithTitle:@"产品列表"
                                   image:[UIImage imageNamed:@"Image-1"]
                                     tag:1];
+    //selected的图片
+    //productListNavigationController.tabBarItem.selectedImage=[[UIImage imageNamed:@"Image-1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     clientListNavigationController.tabBarItem =
     [[UITabBarItem alloc] initWithTitle:@"客户列表"
                                   image:[UIImage imageNamed:@"Image"]

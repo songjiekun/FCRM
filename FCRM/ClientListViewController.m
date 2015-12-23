@@ -321,7 +321,7 @@
     
     
     //查看用户详细页面
-    [self performSegueWithIdentifier:@"ClientDetailSegue" sender:tableView];
+    //[self performSegueWithIdentifier:@"ClientDetailSegue" sender:tableView];
     
 }
 

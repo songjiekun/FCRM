@@ -42,11 +42,48 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    //设置custom input view
+    CGFloat screenWidth=[[UIScreen mainScreen] bounds].size.width;
+    CGFloat screenHeight=[[UIScreen mainScreen] bounds].size.height;
+    
+    MyInputView *inputView=[[MyInputView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight/3)];
+    
+    inputView.delegate=self;
+    
+    self.clientAgeTextField.inputView=inputView;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - inputView的代理
+-(void)clickNumber:(NSInteger)number{
+    
+    self.clientAgeTextField.text = [NSString stringWithFormat:@"%@%@",self.clientAgeTextField.text,@(number)];
+    
+}
+
+-(void)clickDelete{
+    
+    if (self.clientAgeTextField.text.length>=1) {
+        self.clientAgeTextField.text = [self.clientAgeTextField.text substringToIndex:(self.clientAgeTextField.text.length-1)];
+    }
+    
+    
+    
+}
+
+-(void)clickClose{
+    
+    //退出keyboard
+    [self.view endEditing:YES];
+    
 }
 
 #pragma mark - target action回调方法
